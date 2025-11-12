@@ -1,0 +1,30 @@
+# 自动处理换行符（保留原配置优点）
+* text=auto
+
+# 编程语言支持（扩展语言范围）
+*.cs     diff=csharp
+*.py     diff=python
+*.c      diff=c
+*.cpp    diff=cpp
+*.h      diff=c
+*.cu     diff=cpp
+*.cl     diff=opencl
+
+# 文档文件（保留原配置）
+*.doc    diff=astextplain
+*.docx   diff=astextplain  
+*.pdf    diff=astextplain
+*.rtf    diff=astextplain
+
+# 新增：明确标记二进制文件（重要！）
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.zip    binary
+*.tar.gz binary
+
+# 新增：确保文本文件使用 LF
+*.md     text eol=lf
+*.txt    text eol=lf
+*.json   text eol=lf
