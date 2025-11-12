@@ -71,37 +71,20 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 
 
 
-### 3. Blog
+#### Blog
 - Multi-agent-[How Many Agents Does it Take to Beat PyTorch?(surprisingly not that much)](https://letters.lossfunk.com/p/how-many-agents-does-it-take-to-beat)
 - KernelFalcon-[KernelFalcon: Autonomous GPU Kernel Generation via Deep Agents](https://pytorch.org/blog/kernelfalcon-autonomous-gpu-kernel-generation-via-deep-agents/)
 - Deepseek-R1(NVDIA DEVELOPER)-[Automating GPU Kernel Generation with DeepSeek-R1 and Inference Time Scaling](https://developer.nvidia.com/blog/automating-gpu-kernel-generation-with-deepseek-r1-and-inference-time-scaling/)
 
 
 
-### 4. Benchmark Suites & Datasets
+#### Benchmark Suites & Datasets
+- arxiv'25-[KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/abs/2502.10517)
+- arxiv'25-[MultiKernelBench: A Multi-Platform Benchmark for Kernel Generation](https://arxiv.org/abs/2507.17773)
+- HPDX'25-[Can Large Language Models Predict Parallel Code Performance](https://dl.acm.org/doi/abs/10.1145/3731545.3743645)
+- arxiv'25-[The ai cuda engineer: Agentic cuda kernel discovery, optimization and composition（Towards Robust Agentic CUDA Kernel Benchmarking, Verification, and Optimization）](https://pub.sakana.ai/static/paper.pdf)
+- arxiv.25'-[ConCuR: Conciseness Makes State-of-the-Art Kernel Generation](https://arxiv.org/abs/2510.07356)
 
-
----
-
-## 🧠 Representative Frameworks
-
-| Framework | Type | Era | Description |
-|------------|------|------|-------------|
-| **TVM / AutoTVM** | Compiler-based | Pre-LLM | Template-driven kernel optimization and auto-tuning |
-| **TACO** | Compiler | Pre-LLM | Sparse tensor algebra compiler |
-| **Triton** | DSL | Transition | Python-based GPU kernel programming and code generation |
-| **GEAK** | AI-driven | Post-LLM | End-to-end GPU kernel optimization via LLMs and feedback |
-| **Mirage / DeepTune** | Model-based | Post-LLM | Neural kernel synthesis and performance prediction |
-
----
-
-## 🧪 Research Topics Covered
-
-- GPU operation and memory hierarchy
-- Automatic kernel synthesis and tuning
-- Program representation learning
-- Feedback-based and self-evolving optimizers
-- Evaluation and benchmarking methodology
 
 ---
 
