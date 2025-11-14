@@ -16,10 +16,32 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 ## 📚 Contents
 
 ### 1. Pre-LLM Era: Manual and Compiler-based Optimization
-- Kernel auto-tuning frameworks (e.g., AutoTVM, Halide, Ansor)
-- Analytical performance modeling and cost estimation
-- Static optimization and hardware-aware scheduling
-- Operator-specific optimization (e.g., GEMM, convolution, reduction)
+#### Analytical and Model-driven Performance Optimization
+
+- 
+
+
+#### Compiler- and Directive-based Frameworks
+- journal'13-[OpenMPC: extended OpenMP for efficient programming and tuning on GPUs](https://www.inderscienceonline.com/doi/abs/10.1504/IJCSE.2013.052110)
+- journal'17-[RT-CUDA: a software tool for CUDA code restructuring](https://link.springer.com/article/10.1007/s10766-016-0433-6)
+- IEEE-TPDS'10-[hiCUDA: High-level GPGPU programming](https://ieeexplore.ieee.org/abstract/document/5445082/)
+- TACO'13-[A script-based autotuning compiler system to generate high-performance CUDA code](https://dl.acm.org/doi/abs/10.1145/2400682.2400690)
+- GPGPU-3'10-[A mapping path for multi-GPGPU accelerated computers from a portable high level programming abstraction](https://dl.acm.org/doi/abs/10.1145/1735688.1735698)
+- SC'09-[Implementing sparse matrix-vector multiplication on throughput-oriented processors](https://dl.acm.org/doi/abs/10.1145/1654059.1654078)
+
+#### Library-level and Operator-chaining Optimization
+
+
+#### Auto-tuning and Empirical Search Frameworks
+
+#### Data Representation and Intelligent Storage Design
+
+#### Synchronization and Dynamic Load Balancing
+
+#### Blog
+- XLA-[XLA: TensorFlow, Compiled](https://github.com/openxla/xla)
+- CUTLASS-[CUTLASS: Software Primitives for Dense Linear Algebra at All Levels and Scales within CUDA](https://www.nvidia.com/en-us/on-demand/session/gtcsiliconvalley2018-s8854/)
+- CUTLASS-[CUTLASS: CUDA Templates for Linear Algebra Subroutines](https://github.com/NVIDIA/cutlass)
 
 ### 2. Post-LLM Era: AI-based and LLM-driven Optimization
 
@@ -93,3 +115,4 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 | Title | Year | Focus |
 |-------|------|--------|
 | “Auto-tuning of GPU Kernels: Techniques and Trends” | 2020 | [Pre-LLM tuning methodologies](https://dl.acm.org/doi/10.1145/3650200.3656626) |
+| "A Review of CUDA Optimization Techniques and Tools for Structured Grid Computing"| 2019 | [CUDA Optimization Techniques and Tools for Structured Grid Computing](https://link.springer.com/article/10.1007/s00607-019-00744-1) |
