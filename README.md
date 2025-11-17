@@ -35,6 +35,24 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 #### Auto-tuning and Empirical Search Frameworks
 
 #### Data Representation and Intelligent Storage Design
+- arxiv'14-[cuDNN: Efficient Primitives for Deep Learning](https://arxiv.org/abs/1410.0759)
+- TECS'22-[TensorRT-Based Framework and Optimization Methodology for Deep Learning Inference on Jetson Boards](https://dl.acm.org/doi/abs/10.1145/3508391)
+- C&EE’20-[Accelerating Sparse Matrix–Matrix Multiplication with GPU Tensor Cores](https://doi.org/10.1016/j.compeleceng.2020.106848)
+- arXiv'17-[Mixed Precision Training](https://arxiv.org/abs/1710.03740)
+- SC'14-[Efficient Sparse Matrix-Vector Multiplication on GPUs Using the CSR Storage Format](https://ieeexplore.ieee.org/abstract/document/7013050/)
+- arXiv'17-[Block-Sparse Recurrent Neural Networks](https://arxiv.org/abs/1711.02782)
+- FITEE'17-[A Systematic Review of Structured Sparse Learning](https://link.springer.com/article/10.1631/FITEE.1601489)
+- arXiv'21-[Accelerating Sparse Deep Neural Networks](https://arxiv.org/abs/2104.08378)
+- CVPR'18-[Quantization and training of neural networks for efficient integer-arithmetic-only inference](https://openaccess.thecvf.com/content_cvpr_2018/html/Jacob_Quantization_and_Training_CVPR_2018_paper.html)
+- TPAMI'10-[Product quantization for nearest neighbor search](https://ieeexplore.ieee.org/abstract/document/5432202/)
+- TPAMI'13-[Optimized product quantization](https://ieeexplore.ieee.org/abstract/document/6678503/)
+- CVPR'18-[Quantization and training of neural networks for efficient integer-arithmetic-only inference](https://openaccess.thecvf.com/content_cvpr_2018/html/Jacob_Quantization_and_Training_CVPR_2018_paper.html)
+- IEEE Big Data’19-[Billion-Scale Similarity Search with GPUs.](https://ieeexplore.ieee.org/abstract/document/8733051/)
+- SC'08-[Benchmarking GPUs to Tune Dense Linear Algebra](https://ieeexplore.ieee.org/abstract/document/5214359/)
+- GTC'10-[Better Performance at Lower Occupancy](https://dmacssite.github.io/materials/volkov10-GTC.pdf)
+- HPCA'11-[A Quantitative Performance Analysis Model for GPU Architectures](https://ieeexplore.ieee.org/abstract/document/5749745/)
+- PPoPP'08-[Optimization Principles and Application Performance Evaluation of a Multithreaded GPU Using CUDA](https://dl.acm.org/doi/abs/10.1145/1345206.1345220)
+- ISPA'10-[Demystifying GPU Microarchitecture Through Microbenchmarking](https://ieeexplore.ieee.org/abstract/document/5452013/)
 
 #### Synchronization and Dynamic Load Balancing
 
@@ -42,6 +60,8 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 - XLA-[XLA: TensorFlow, Compiled](https://github.com/openxla/xla)
 - CUTLASS-[CUTLASS: Software Primitives for Dense Linear Algebra at All Levels and Scales within CUDA](https://www.nvidia.com/en-us/on-demand/session/gtcsiliconvalley2018-s8854/)
 - CUTLASS-[CUTLASS: CUDA Templates for Linear Algebra Subroutines](https://github.com/NVIDIA/cutlass)
+- CUTLASS-[CUTLASS: Fast Linear Algebra in CUDA C++](https://docs.nvidia.com/cutlass/overview.html)
+- CUDA-[Optimizing Parallel Reduction in CUDA](https://developer.download.nvidia.com/compute/DevZone/C/html/C/src/reduction/doc/reduction.pdf)
 
 ### 2. Post-LLM Era: AI-based and LLM-driven Optimization
 
