@@ -1,6 +1,6 @@
-# Awesome-GPU-Kernel-Optimization
-A curated list of resources on GPU kernel optimization — from manual tuning to AI-driven code generation with LLMs.
-
+# Awesome GPU Kernel Optimization
+This is the repository of survey on Deep Learning Kernel Generation. For details, please refer to:
+A Survey on Deep Learning Kernel Generation Using Large Language Models [paper]
 ---
 
 ## 🧩 Overview
