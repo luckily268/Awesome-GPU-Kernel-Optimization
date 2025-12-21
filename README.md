@@ -1,7 +1,6 @@
 # Awesome GPU Kernel Optimization
 This is the repository of survey on Deep Learning Kernel Generation. For details, please refer to:
 A Survey on Deep Learning Kernel Generation Using Large Language Models [paper]
----
 
 ## 🧩 Overview
 
@@ -14,7 +13,7 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 
 ## 📚 Contents
 
-### 1. Pre-LLM Era: Manual and Compiler-based Optimization
+### 1. 🚂Pre-LLM Era: Manual and Compiler-based Optimization
 
 #### 📚Journal Article
 - ACM Comput. Surv., Vol. 55, No. 11-[Optimization Techniques for GPU Programming](https://dl.acm.org/doi/full/10.1145/3570638)
@@ -51,7 +50,7 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 
 
 
-### 2. 🔥Post-LLM Era: AI-based and LLM-driven Optimization
+### 2. 🔥🔥🔥Post-LLM Era: AI-based and LLM-driven Optimization
 #### 🤖Single-Agent Systems
 - arxiv'25-[KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/abs/2502.10517)
 - blog-[Automating GPU Kernel Generation with DeepSeek-R1 and Inference Time Scaling](https://developer.nvidia.com/blog/automating-gpu-kernel-generation-with-deepseek-r1-and-inference-time-scaling/)
