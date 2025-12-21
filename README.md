@@ -51,56 +51,8 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 
 
 
-
-#### Compiler- and Directive-based Frameworks
-- journal'13-[OpenMPC: extended OpenMP for efficient programming and tuning on GPUs](https://www.inderscienceonline.com/doi/abs/10.1504/IJCSE.2013.052110)
-- journal'17-[RT-CUDA: a software tool for CUDA code restructuring](https://link.springer.com/article/10.1007/s10766-016-0433-6)
-- IEEE-TPDS'10-[hiCUDA: High-level GPGPU programming](https://ieeexplore.ieee.org/abstract/document/5445082/)
-- TACO'13-[A script-based autotuning compiler system to generate high-performance CUDA code](https://dl.acm.org/doi/abs/10.1145/2400682.2400690)
-- GPGPU-3'10-[A mapping path for multi-GPGPU accelerated computers from a portable high level programming abstraction](https://dl.acm.org/doi/abs/10.1145/1735688.1735698)
-- SC'09-[Implementing sparse matrix-vector multiplication on throughput-oriented processors](https://dl.acm.org/doi/abs/10.1145/1654059.1654078)
-
-
-
-
-
-
-#### Library-level and Operator-chaining Optimization
-
-
-#### Auto-tuning and Empirical Search Frameworks
-
-#### Data Representation and Intelligent Storage Design
-- arxiv'14-[cuDNN: Efficient Primitives for Deep Learning](https://arxiv.org/abs/1410.0759)
-- TECS'22-[TensorRT-Based Framework and Optimization Methodology for Deep Learning Inference on Jetson Boards](https://dl.acm.org/doi/abs/10.1145/3508391)
-- C&EE’20-[Accelerating Sparse Matrix–Matrix Multiplication with GPU Tensor Cores](https://doi.org/10.1016/j.compeleceng.2020.106848)
-- arXiv'17-[Mixed Precision Training](https://arxiv.org/abs/1710.03740)
-- SC'14-[Efficient Sparse Matrix-Vector Multiplication on GPUs Using the CSR Storage Format](https://ieeexplore.ieee.org/abstract/document/7013050/)
-- arXiv'17-[Block-Sparse Recurrent Neural Networks](https://arxiv.org/abs/1711.02782)
-- FITEE'17-[A Systematic Review of Structured Sparse Learning](https://link.springer.com/article/10.1631/FITEE.1601489)
-- arXiv'21-[Accelerating Sparse Deep Neural Networks](https://arxiv.org/abs/2104.08378)
-- CVPR'18-[Quantization and training of neural networks for efficient integer-arithmetic-only inference](https://openaccess.thecvf.com/content_cvpr_2018/html/Jacob_Quantization_and_Training_CVPR_2018_paper.html)
-- TPAMI'10-[Product quantization for nearest neighbor search](https://ieeexplore.ieee.org/abstract/document/5432202/)
-- TPAMI'13-[Optimized product quantization](https://ieeexplore.ieee.org/abstract/document/6678503/)
-- CVPR'18-[Quantization and training of neural networks for efficient integer-arithmetic-only inference](https://openaccess.thecvf.com/content_cvpr_2018/html/Jacob_Quantization_and_Training_CVPR_2018_paper.html)
-- IEEE Big Data’19-[Billion-Scale Similarity Search with GPUs.](https://ieeexplore.ieee.org/abstract/document/8733051/)
-- SC'08-[Benchmarking GPUs to Tune Dense Linear Algebra](https://ieeexplore.ieee.org/abstract/document/5214359/)
-- GTC'10-[Better Performance at Lower Occupancy](https://dmacssite.github.io/materials/volkov10-GTC.pdf)
-- HPCA'11-[A Quantitative Performance Analysis Model for GPU Architectures](https://ieeexplore.ieee.org/abstract/document/5749745/)
-- PPoPP'08-[Optimization Principles and Application Performance Evaluation of a Multithreaded GPU Using CUDA](https://dl.acm.org/doi/abs/10.1145/1345206.1345220)
-- ISPA'10-[Demystifying GPU Microarchitecture Through Microbenchmarking](https://ieeexplore.ieee.org/abstract/document/5452013/)
-
-#### Synchronization and Dynamic Load Balancing
-
-#### Blog
-- XLA-[XLA: TensorFlow, Compiled](https://github.com/openxla/xla)
-- CUTLASS-[CUTLASS: Software Primitives for Dense Linear Algebra at All Levels and Scales within CUDA](https://www.nvidia.com/en-us/on-demand/session/gtcsiliconvalley2018-s8854/)
-- CUTLASS-[CUTLASS: CUDA Templates for Linear Algebra Subroutines](https://github.com/NVIDIA/cutlass)
-- CUTLASS-[CUTLASS: Fast Linear Algebra in CUDA C++](https://docs.nvidia.com/cutlass/overview.html)
-- CUDA-[Optimizing Parallel Reduction in CUDA](https://developer.download.nvidia.com/compute/DevZone/C/html/C/src/reduction/doc/reduction.pdf)
-
-### 2. Post-LLM Era: AI-based and LLM-driven Optimization
-#### Single-Agent Systems
+### 2. 🔥Post-LLM Era: AI-based and LLM-driven Optimization
+#### 🤖Single-Agent Systems
 - arxiv'25-[KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/abs/2502.10517)
 - blog-[Automating GPU Kernel Generation with DeepSeek-R1 and Inference Time Scaling](https://developer.nvidia.com/blog/automating-gpu-kernel-generation-with-deepseek-r1-and-inference-time-scaling/)
 - Euro-Par'25 (LNCS)-[Tutoring LLM into a Better CUDA Optimizer](https://link.springer.com/chapter/10.1007/978-3-031-99857-7_18)
@@ -112,7 +64,7 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 - arxiv'25-[KernelBand: Boosting LLM-based Kernel Optimization with a Hierarchical and Hardware-aware Multi-armed Bandit](https://arxiv.org/abs/2511.18868)
 
 
-#### Multi-Agent Systems
+#### 🤖🤖Multi-Agent Systems
 - arxiv'25-[GPU Kernel Scientist: An LLM-Driven Framework for Iterative Kernel Optimization](https://arxiv.org/abs/2506.20807)
 - arxiv'25-[Geak: Introducing Triton Kernel AI Agent & Evaluation Benchmarks](https://arxiv.org/abs/2507.23194)
 - blog-[How Many Agents Does it Take to Beat PyTorch?(surprisingly not that much)](https://letters.lossfunk.com/p/how-many-agents-does-it-take-to-beat)
@@ -126,7 +78,7 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 - arxiv'25-[Optimizing PyTorch Inference with LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2511.16964)
 - arxiv'25-[PRAGMA: A Profiling-Reasoned Multi-Agent Framework for Automatic Kernel Optimization](https://arxiv.org/abs/2511.06345)
 
-#### Training-based Methods
+#### 🎯Training-based Methods
 - arxiv'25(special for CUDA)-[Kevin: Multi-turn rl for generating cuda kernels](https://arxiv.org/abs/2507.11948)
 - huggingface-[KernelLLM](https://huggingface.co/facebook/KernelLLM)
 - arxiv'25-[Cuda-l1: Improving cuda optimization via contrastive reinforcement learning](https://arxiv.org/abs/2507.14111)
@@ -138,12 +90,12 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 - arxiv'25-[SwizzlePerf: Hardware-Aware LLMs for GPU Kernel Performance Optimization](https://arxiv.org/abs/2508.20258)
 - arxiv'25-[Integrating Performance Tools in Model Reasoning for GPU Kernel Optimization](https://arxiv.org/abs/2510.17158)
 
-#### Mobile
+#### 📱Mobile
 - arxiv'25-[Scaling LLM Test-Time Compute with Mobile NPU on Smartphones](https://arxiv.org/abs/2509.23324)
 
 
 
-#### Benchmark Suites & Datasets
+#### 💹Benchmark Suites & Datasets
 - arxiv'25-[KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/abs/2502.10517)
 - arxiv'25-[MultiKernelBench: A Multi-Platform Benchmark for Kernel Generation](https://arxiv.org/abs/2507.17773)
 - HPDX'25-[Can Large Language Models Predict Parallel Code Performance](https://dl.acm.org/doi/abs/10.1145/3731545.3743645)
