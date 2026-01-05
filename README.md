@@ -114,7 +114,8 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 
 ## 🔍 Related Surveys
 
-| Title | Year | Focus |
-|-------|------|--------|
-| “Auto-tuning of GPU Kernels: Techniques and Trends” | 2020 | [Pre-LLM tuning methodologies](https://dl.acm.org/doi/10.1145/3650200.3656626) |
-| "A Review of CUDA Optimization Techniques and Tools for Structured Grid Computing"| 2019 | [CUDA Optimization Techniques and Tools for Structured Grid Computing](https://link.springer.com/article/10.1007/s00607-019-00744-1) |
+| Title | Year |
+|-------|------|
+| [Auto-tuning of GPU Kernels: Techniques and Trends](https://dl.acm.org/doi/10.1145/3650200.3656626) | 2020 |
+| [A Review of CUDA Optimization Techniques and Tools for Structured Grid Computing](https://link.springer.com/article/10.1007/s00607-019-00744-1)| 2019 |
+| [A Survey on Large Language Models for Code Generation](https://arxiv.org/abs/2406.00515) | 2024 |
