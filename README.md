@@ -33,6 +33,13 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 - arXiv'25-[Accelerating Bangla NLP Tasks with Automatic Mixed Precision: Resource-Efficient Training Preserving Model Efficacy](https://arxiv.org/abs/2512.00829)
 - arXiv'24-[Evaluating Quantized Large Language Models for Code Generation on Low-Resource Language Benchmarks](https://www.sciencedirect.com/science/article/abs/pii/S2590118425000371)
 - arXiv'25-[Compiler-supported reduced precision and AoS-SoA transformations for heterogeneous hardware](https://arxiv.org/abs/2512.05516)
+- arXiv'23-[Execution-based Code Generation using Deep Reinforcement Learning](https://arxiv.org/abs/2301.13816)
+- arXiv'22-[Compilable Neural Code Generation with Compiler Feedback](https://arxiv.org/abs/2203.05132)
+- arXiv'23-[RLTF: Reinforcement Learning from Unit Test Feedback](https://arxiv.org/abs/2307.04349)
+- IEEE/ACM'29-[Style-Analyzer: Fixing Code Style Inconsistencies with Interpretable Unsupervised Algorithms](https://ieeexplore.ieee.org/abstract/document/8816753/)
+- IEEE'09-[Learning a metric for code readability](https://ieeexplore.ieee.org/abstract/document/5332232)
+
+
 
 #### 🎤Conference Paper
 - SC'18-[Tricore: Parallel triangle counting on gpus](https://ieeexplore.ieee.org/abstract/document/8665796)
@@ -47,8 +54,7 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 - SC'11-[CudaDMA: optimizing GPU memory bandwidth via warp specialization](https://dl.acm.org/doi/abs/10.1145/2063384.2063400)
 - CANDAR'15-[A warp-synchronous implementation for multiple-length multiplication on the GPU](https://ieeexplore.ieee.org/abstract/document/7424695)
 - IPDPS'20-[Demystifying tensor cores to optimize half-precision matrix multiply](https://ieeexplore.ieee.org/abstract/document/9139835)
-
-
+- NeurIPS'22-[CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning](https://proceedings.neurips.cc/paper_files/paper/2022/hash/8636419dea1aa9fbd25fc4248e702da4-Abstract-Conference.html)
 
 ### 2. 🔥🔥🔥Post-LLM Era: AI-based and LLM-driven Optimization
 #### 🤖Single-Agent Systems
