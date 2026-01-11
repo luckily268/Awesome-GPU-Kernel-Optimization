@@ -12,7 +12,7 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 
 
 ## 📚 Contents
-
+📅 Last update on 2025/12/30
 ### 1. 🚂Pre-LLM Era: Manual and Compiler-based Optimization
 
 #### 📚Journal Article
