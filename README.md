@@ -15,7 +15,7 @@ This repository collects key research works, frameworks, and open-source project
 > - Code: GitHub / HF / Official repo if available, otherwise marked as 🔒
 
 ## 📚 Contents
-📅 Last update on 2025/12/30
+📅 Last update on 2026/1/11
 ### 🔥🔥🔥Post-LLM Era: AI-based and LLM-driven Optimization
 #### 🤖Single-Agent Systems
 - arxiv'25-[KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/abs/2502.10517)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/ScalingIntelligence/KernelBench?style=social)](https://github.com/ScalingIntelligence/KernelBench)
@@ -79,3 +79,68 @@ repo)[![GitHub stars](https://img.shields.io/github/stars/haozixu/llama.cpp-npu?
 | [Auto-tuning of GPU Kernels: Techniques and Trends](https://dl.acm.org/doi/10.1145/3650200.3656626)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/HPCRL/Ansor-AF-DS?style=social)](https://github.com/HPCRL/Ansor-AF-DS) | 2020 |
 | [A Review of CUDA Optimization Techniques and Tools for Structured Grid Computing](https://link.springer.com/article/10.1007/s00607-019-00744-1)| 2019 |
 | [A Survey on Large Language Models for Code Generation](https://arxiv.org/abs/2406.00515)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/juyongjiang/CodeLLMSurvey?style=social)](https://github.com/juyongjiang/CodeLLMSurvey) | 2024 | 
+
+
+
+---
+
+## 📖 Common Acronyms (Awesome GPU Kernel Optimization)
+
+| Acronym | Full Form | Scope |
+|--------|----------|------|
+| AKG | Automatic Kernel Generator | MindSpore / TVM-style kernel generators |
+| AST | Abstract Syntax Tree | Code representation |
+| BK | Benchmark / Benchmarking | Dataset & eval suites |
+| BT | Block Tiling | Kernel tiling strategy |
+| CTA | Cooperative Thread Array | CUDA execution unit |
+| CUDA | Compute Unified Device Architecture | NVIDIA GPU programming |
+| DCE | Dead Code Elimination | Compiler optimization |
+| DSL | Domain-Specific Language | Triton / TVM IR |
+| FLOPs | Floating-Point Operations | Performance metric |
+| GPU | Graphics Processing Unit | Target hardware |
+| HF | HuggingFace | Model & dataset hosting |
+| ILP | Instruction-Level Parallelism | Micro-architecture metric |
+| ISA | Instruction Set Architecture | PTX / SASS level |
+| LLM | Large Language Model | Kernel generation agents |
+| MA | Multi-Agent System | Agent frameworks |
+| MMA | Matrix Multiply Accumulate | Tensor Core primitive |
+| NCU | NVIDIA Compute Utility | GPU profiler |
+| NPU | Neural Processing Unit | Mobile / edge accelerators |
+| OI | Operational Intensity | Roofline metric |
+| OSS | Open-Source Software | Reproducibility |
+| PTX | Parallel Thread Execution | CUDA IR |
+| RL | Reinforcement Learning | Training-based methods |
+| SA | Single-Agent System | Kernel synthesis agent |
+| SASS | Streaming Assembler | NVIDIA machine code |
+| SM | Streaming Multiprocessor | GPU core unit |
+| TB | Training-Based Method | RL / fine-tuned LLMs |
+| TMA | Tensor Memory Accelerator | Hopper architecture |
+| Triton | Tensor IR Toolchain for Operators | Kernel DSL |
+
+---
+
+### 🤖 Agent & Optimization Frameworks
+
+| Acronym | Full Form |
+|--------|----------|
+| FSR | Failure-Sensitive Revision |
+| SDS | Search-Driven Synthesis |
+| ISO | Iterative Search Optimization |
+| PRM | Process Reward Model |
+| ORM | Outcome Reward Model |
+
+---
+
+### 💹 Benchmarks & Evaluation
+
+| Acronym | Full Form |
+|--------|----------|
+| KBench | KernelBench |
+| MKB | MultiKernelBench |
+| NPU-Eval | Neural Processing Unit Evaluation |
+| Roofline | Roofline Performance Model |
+
+
+## Contributing
+Contributions are welcome! If you have new resources, tools, or insights to add, feel free to submit a pull request.
+For detailed guidelines, please refer to [CONTRIBUTING.md](./CONTRIBUTING.md).
