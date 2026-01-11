@@ -5,9 +5,6 @@ A Survey on Deep Learning Kernel Generation Using Large Language Models [paper]
 ## 🧩 Overview
 
 This repository collects key research works, frameworks, and open-source projects related to **GPU kernel optimization**, **automatic tuning**, and **AI-based code generation**.
-
-It aims to provide a clear picture of how GPU kernel optimization evolved:
-- **Before LLMs (Pre-LLM Era):** dominated by manual tuning, rule-based optimization, and compiler-guided heuristics.
 - **After LLMs (Post-LLM Era):** characterized by AI-assisted code generation, autonomous kernel synthesis, and data-driven performance tuning.
 
 
