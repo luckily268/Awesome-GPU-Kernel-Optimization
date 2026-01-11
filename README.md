@@ -7,16 +7,18 @@ A Survey on Deep Learning Kernel Generation Using Large Language Models [paper]
 This repository collects key research works, frameworks, and open-source projects related to **GPU kernel optimization**, **automatic tuning**, and **AI-based code generation**.
 - **After LLMs (Post-LLM Era):** characterized by AI-assisted code generation, autonomous kernel synthesis, and data-driven performance tuning.
 
-- **CUDA-LLM** (arXiv 2025)  
-  - 📄 Paper: https://arxiv.org/abs/2506.09092  
-  - 🔓 Code: https://github.com/xxx/xxx  
-  - 🧪 Benchmark: —
-  - 
+> Each entry is formatted as:
+> **[Source] – [Paper] – [Code]**
+>
+> - Source: arXiv / Conference / Blog / Tech Report  
+> - Paper: paper title (linked)  
+> - Code: GitHub / HF / Official repo if available, otherwise marked as 🚫
+
 ## 📚 Contents
 📅 Last update on 2025/12/30
 ### 🔥🔥🔥Post-LLM Era: AI-based and LLM-driven Optimization
 #### 🤖Single-Agent Systems
-- arxiv'25-[KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/abs/2502.10517)
+- arxiv'25-[KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/abs/2502.10517)– 🔓 (https://github.com/ScalingIntelligence/KernelBench)
 - blog-[Automating GPU Kernel Generation with DeepSeek-R1 and Inference Time Scaling](https://developer.nvidia.com/blog/automating-gpu-kernel-generation-with-deepseek-r1-and-inference-time-scaling/)
 - Euro-Par'25 (LNCS)-[Tutoring LLM into a Better CUDA Optimizer](https://link.springer.com/chapter/10.1007/978-3-031-99857-7_18)
 - arxiv'25-[GPU Performance Portability needs Autotuning](https://arxiv.org/abs/2505.03780)
