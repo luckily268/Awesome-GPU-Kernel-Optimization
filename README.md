@@ -18,7 +18,7 @@ This repository collects key research works, frameworks, and open-source project
 📅 Last update on 2025/12/30
 ### 🔥🔥🔥Post-LLM Era: AI-based and LLM-driven Optimization
 #### 🤖Single-Agent Systems
-- arxiv'25-[KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/abs/2502.10517)– 🔓 (https://github.com/ScalingIntelligence/KernelBench)
+- arxiv'25-[KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/abs/2502.10517)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/ScalingIntelligence/KernelBench?style=social)](https://github.com/ScalingIntelligence/KernelBench)
 - blog-[Automating GPU Kernel Generation with DeepSeek-R1 and Inference Time Scaling](https://developer.nvidia.com/blog/automating-gpu-kernel-generation-with-deepseek-r1-and-inference-time-scaling/)
 - Euro-Par'25 (LNCS)-[Tutoring LLM into a Better CUDA Optimizer](https://link.springer.com/chapter/10.1007/978-3-031-99857-7_18)
 - arxiv'25-[GPU Performance Portability needs Autotuning](https://arxiv.org/abs/2505.03780)
