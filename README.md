@@ -67,7 +67,7 @@ repo)[![GitHub stars](https://img.shields.io/github/stars/haozixu/llama.cpp-npu?
 - arxiv'25-[NPUEval: Optimizing NPU Kernels with LLMs and Open Source Compilers](https://arxiv.org/abs/2507.14403)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/Scientific-Computing-Lab/ParallelCodeEstimation?style=social)](https://github.com/Scientific-Computing-Lab/ParallelCodeEstimation)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/AMDResearch/NPUEval?style=social)](https://github.com/AMDResearch/NPUEval)
 - arxiv'25-[Towards robust agentic cuda kernel benchmarking, verification, and optimization](https://arxiv.org/abs/2509.14279)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/SakanaAI/robust-kbench?style=social)](https://github.com/SakanaAI/robust-kbench)
 - github-[BackendBanch](https://github.com/meta-pytorch/BackendBench)
-- arxiv.25'-[ConCuR: Conciseness Makes State-of-the-Art Kernel Generation](https://arxiv.org/abs/2510.07356)– 🔓 (https://huggingface.co/lkongam/KernelCoder)
+- arxiv.25'-[ConCuR: Conciseness Makes State-of-the-Art Kernel Generation](https://arxiv.org/abs/2510.07356)– 🔓 ![HF downloads](https://img.shields.io/huggingface/models/lkongam/KernelCoder?label=HF%20downloads)
 
 
 ---
