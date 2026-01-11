@@ -141,6 +141,16 @@ repo)[![GitHub stars](https://img.shields.io/github/stars/haozixu/llama.cpp-npu?
 | Roofline | Roofline Performance Model |
 
 
-## Contributing
+## 👋Contributing
 Contributions are welcome! If you have new resources, tools, or insights to add, feel free to submit a pull request.
 For detailed guidelines, please refer to [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+---
+
+## 📄 License
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+© 2025 Awesome GPU Kernel Optimization. Licensed under the MIT License.  
+See [LICENSE](./LICENSE).
+
