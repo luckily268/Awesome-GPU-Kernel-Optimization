@@ -67,7 +67,7 @@ repo)[![GitHub stars](https://img.shields.io/github/stars/haozixu/llama.cpp-npu?
 - arxiv'25-[NPUEval: Optimizing NPU Kernels with LLMs and Open Source Compilers](https://arxiv.org/abs/2507.14403)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/Scientific-Computing-Lab/ParallelCodeEstimation?style=social)](https://github.com/Scientific-Computing-Lab/ParallelCodeEstimation)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/AMDResearch/NPUEval?style=social)](https://github.com/AMDResearch/NPUEval)
 - arxiv'25-[Towards robust agentic cuda kernel benchmarking, verification, and optimization](https://arxiv.org/abs/2509.14279)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/SakanaAI/robust-kbench?style=social)](https://github.com/SakanaAI/robust-kbench)
 - github-[BackendBanch](https://github.com/meta-pytorch/BackendBench)
-- arxiv.25'-[ConCuR: Conciseness Makes State-of-the-Art Kernel Generation](https://arxiv.org/abs/2510.07356)– ![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fmodels%2F{model_id}&query=%24.likes&logo=huggingface&label=likes)
+- arxiv.25'-[ConCuR: Conciseness Makes State-of-the-Art Kernel Generation](https://arxiv.org/abs/2510.07356)– ![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fmodels%2F{model_id}&query=%24.downloads&logo=huggingface&label=downloads)
 (https://huggingface.co/lkongam/KernelCoder)
 
 
@@ -77,6 +77,6 @@ repo)[![GitHub stars](https://img.shields.io/github/stars/haozixu/llama.cpp-npu?
 
 | Title | Year |
 |-------|------|
-| [Auto-tuning of GPU Kernels: Techniques and Trends](https://dl.acm.org/doi/10.1145/3650200.3656626) | 2020 |
+| [Auto-tuning of GPU Kernels: Techniques and Trends](https://dl.acm.org/doi/10.1145/3650200.3656626)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/HPCRL/Ansor-AF-DS?style=social)](https://github.com/HPCRL/Ansor-AF-DS) | 2020 |
 | [A Review of CUDA Optimization Techniques and Tools for Structured Grid Computing](https://link.springer.com/article/10.1007/s00607-019-00744-1)| 2019 |
-| [A Survey on Large Language Models for Code Generation](https://arxiv.org/abs/2406.00515) | 2024 |
+| [A Survey on Large Language Models for Code Generation](https://arxiv.org/abs/2406.00515)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/juyongjiang/CodeLLMSurvey?style=social)](https://github.com/juyongjiang/CodeLLMSurvey) | 2024 | 
