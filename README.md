@@ -13,50 +13,7 @@ It aims to provide a clear picture of how GPU kernel optimization evolved:
 
 ## 📚 Contents
 📅 Last update on 2025/12/30
-### 1. 🚂Pre-LLM Era: Manual and Compiler-based Optimization
-
-#### 📚Journal Article
-- ACM Comput. Surv., Vol. 55, No. 11-[Optimization Techniques for GPU Programming](https://dl.acm.org/doi/full/10.1145/3570638)
-- Mach. Vis. Appl.'13-[An optimized approach to histogram computation on GPU](https://link.springer.com/article/10.1007/s00138-012-0443-3)
-- Concurr. Comput.-P. E.'09-[Exploiting graphical processing units for data-parallel scientific applications](https://onlinelibrary.wiley.com/doi/abs/10.1002/cpe.1462)
-- Comput. Electr. Eng.'20-[Accelerating sparse matrix–matrix multiplication with GPU Tensor Cores](https://www.sciencedirect.com/science/article/pii/S0045790620307011)
-- Int. J. High Perform. C.'10-[An improved magma gemm for fermi graphics processing units](https://journals.sagepub.com/doi/abs/10.1177/1094342010385729)
-- IEEE-TPDS'13-[Medusa: Simplified graph processing on GPUs](https://ieeexplore.ieee.org/abstract/document/6497047/)
-- Procedia Comput. Sci.'16-[Performance tuning and optimization techniques of fixed and variable size batched Cholesky factorization on GPUs](https://www.sciencedirect.com/science/article/pii/S1877050916306548)
-- Parallel Comput.'18-[Benchmarking the GPU memory at the warp level](https://www.sciencedirect.com/science/article/abs/pii/S0167819117301825)
-- Future Gener. Comp. Sy.'20-[A benchmark set of highly-efficient CUDA and OpenCL kernels and its dynamic autotuning with Kernel Tuning Toolkit](https://www.sciencedirect.com/science/article/abs/pii/S0167739X19327360)
-- ACM-TOMS'20-[Strassen’s algorithm reloaded on GPUs](https://dl.acm.org/doi/abs/10.1145/3372419)
-- Concurr. Comput.-P. E.'18-[Accelerating explicit ODE methods on GPUs by kernel fusion](https://onlinelibrary.wiley.com/doi/abs/10.1002/cpe.4470)
-- GeoInformatica'18-[A compiler approach to map algebra: automatic parallelization, locality optimization, and GPU acceleration of raster spatial analysis](https://link.springer.com/article/10.1007/s10707-017-0312-3)
-- J. Inf. Sci. Eng.'16-[GPU-Based High Performance Password Recovery Technique for Hash Functions](https://www.academia.edu/115050262/GPU_Based_High_Performance_Password_Recovery_Technique_for_Hash_Functions)
-- Sci. Program.'18-[A strategy for automatic performance tuning of stencil computations on GPUs](https://onlinelibrary.wiley.com/doi/full/10.1155/2018/6093054)
-- arXiv'25-[Accelerating Bangla NLP Tasks with Automatic Mixed Precision: Resource-Efficient Training Preserving Model Efficacy](https://arxiv.org/abs/2512.00829)
-- arXiv'24-[Evaluating Quantized Large Language Models for Code Generation on Low-Resource Language Benchmarks](https://www.sciencedirect.com/science/article/abs/pii/S2590118425000371)
-- arXiv'25-[Compiler-supported reduced precision and AoS-SoA transformations for heterogeneous hardware](https://arxiv.org/abs/2512.05516)
-- arXiv'23-[Execution-based Code Generation using Deep Reinforcement Learning](https://arxiv.org/abs/2301.13816)
-- arXiv'22-[Compilable Neural Code Generation with Compiler Feedback](https://arxiv.org/abs/2203.05132)
-- arXiv'23-[RLTF: Reinforcement Learning from Unit Test Feedback](https://arxiv.org/abs/2307.04349)
-- IEEE/ACM'29-[Style-Analyzer: Fixing Code Style Inconsistencies with Interpretable Unsupervised Algorithms](https://ieeexplore.ieee.org/abstract/document/8816753/)
-- IEEE'09-[Learning a metric for code readability](https://ieeexplore.ieee.org/abstract/document/5332232)
-
-
-
-#### 🎤Conference Paper
-- SC'18-[Tricore: Parallel triangle counting on gpus](https://ieeexplore.ieee.org/abstract/document/8665796)
-- SC'11-[Optimizing symmetric dense matrix-vector multiplication on GPUs](https://dl.acm.org/doi/abs/10.1145/2063384.2063392)
-- ICS'12-[High-performance code generation for stencil computations on GPU architectures](https://dl.acm.org/doi/abs/10.1145/2304576.2304619)
-- IISWC'19-[SNU-NPB 2019: parallelizing and optimizing NPB in OpenCL and CUDA for modern GPUs](https://ieeexplore.ieee.org/abstract/document/9041954)
-- HiPC'15-[Memory-efficient parallelization of 3D lattice Boltzmann flow solver on a GPU](https://ieeexplore.ieee.org/abstract/document/7397646/)
-- ICS'16-[Balanced hashing and efficient gpu sparse general matrix-matrix multiplication](https://dl.acm.org/doi/abs/10.1145/2925426.2926273)
-- HiPC'12-[Sparse matrix-matrix multiplication on modern architectures](https://ieeexplore.ieee.org/abstract/document/6507483)
-- Computing Conf.'17-[High performance CUDA AES implementation: A quantitative performance analysis approach](https://ieeexplore.ieee.org/abstract/document/8252225)
-- SAMOS'10-[Compile-time GPU memory access optimizations](https://ieeexplore.ieee.org/abstract/document/5642066)
-- SC'11-[CudaDMA: optimizing GPU memory bandwidth via warp specialization](https://dl.acm.org/doi/abs/10.1145/2063384.2063400)
-- CANDAR'15-[A warp-synchronous implementation for multiple-length multiplication on the GPU](https://ieeexplore.ieee.org/abstract/document/7424695)
-- IPDPS'20-[Demystifying tensor cores to optimize half-precision matrix multiply](https://ieeexplore.ieee.org/abstract/document/9139835)
-- NeurIPS'22-[CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning](https://proceedings.neurips.cc/paper_files/paper/2022/hash/8636419dea1aa9fbd25fc4248e702da4-Abstract-Conference.html)
-
-### 2. 🔥🔥🔥Post-LLM Era: AI-based and LLM-driven Optimization
+### 🔥🔥🔥Post-LLM Era: AI-based and LLM-driven Optimization
 #### 🤖Single-Agent Systems
 - arxiv'25-[KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/abs/2502.10517)
 - blog-[Automating GPU Kernel Generation with DeepSeek-R1 and Inference Time Scaling](https://developer.nvidia.com/blog/automating-gpu-kernel-generation-with-deepseek-r1-and-inference-time-scaling/)
