@@ -8,7 +8,7 @@ This repository collects key research works, frameworks, and open-source project
 - **After LLMs (Post-LLM Era):** characterized by AI-assisted code generation, autonomous kernel synthesis, and data-driven performance tuning.
 
 > Each entry is formatted as:
-> **[Source] – [Paper] – [Code]**
+> **[Source] – [Paper] – [Repo]**
 >
 > - Source: arXiv / Conference / Blog / Tech Report  
 > - Paper: paper title (linked)  
@@ -62,12 +62,13 @@ repo)[![GitHub stars](https://img.shields.io/github/stars/haozixu/llama.cpp-npu?
 
 #### 💹Benchmark Suites & Datasets
 - arxiv'25-[KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/abs/2502.10517)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/ScalingIntelligence/KernelBench?style=social)](https://github.com/ScalingIntelligence/KernelBench)
-- arxiv'25-[MultiKernelBench: A Multi-Platform Benchmark for Kernel Generation](https://arxiv.org/abs/2507.17773)
-- HPDX'25-[Can Large Language Models Predict Parallel Code Performance](https://dl.acm.org/doi/abs/10.1145/3731545.3743645)
-- arxiv'25-[NPUEval: Optimizing NPU Kernels with LLMs and Open Source Compilers](https://arxiv.org/abs/2507.14403)
+- arxiv'25-[MultiKernelBench: A Multi-Platform Benchmark for Kernel Generation](https://arxiv.org/abs/2507.17773)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/wzzll123/MultiKernelBench?style=social)](https://github.com/wzzll123/MultiKernelBench)
+- HPDX'25-[Can Large Language Models Predict Parallel Code Performance](https://dl.acm.org/doi/abs/10.1145/3731545.3743645)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/Scientific-Computing-Lab/ParallelCodeEstimation?style=social)](https://github.com/Scientific-Computing-Lab/ParallelCodeEstimation)
+- arxiv'25-[NPUEval: Optimizing NPU Kernels with LLMs and Open Source Compilers](https://arxiv.org/abs/2507.14403)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/Scientific-Computing-Lab/ParallelCodeEstimation?style=social)](https://github.com/Scientific-Computing-Lab/ParallelCodeEstimation)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/AMDResearch/NPUEval?style=social)](https://github.com/AMDResearch/NPUEval)
 - arxiv'25-[Towards robust agentic cuda kernel benchmarking, verification, and optimization](https://arxiv.org/abs/2509.14279)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/SakanaAI/robust-kbench?style=social)](https://github.com/SakanaAI/robust-kbench)
 - github-[BackendBanch](https://github.com/meta-pytorch/BackendBench)
-- arxiv.25'-[ConCuR: Conciseness Makes State-of-the-Art Kernel Generation](https://arxiv.org/abs/2510.07356)
+- arxiv.25'-[ConCuR: Conciseness Makes State-of-the-Art Kernel Generation](https://arxiv.org/abs/2510.07356)– ![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fmodels%2F{model_id}&query=%24.likes&logo=huggingface&label=likes)
+(https://huggingface.co/lkongam/KernelCoder)
 
 
 ---
