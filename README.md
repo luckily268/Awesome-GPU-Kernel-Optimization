@@ -25,7 +25,7 @@ This repository collects key research works, frameworks, and open-source project
 - arxiv'25-[CUDA-LLM:LLMs Can Write Efficient CUDA Kernels](https://arxiv.org/abs/2506.09092)– 🔒
 - arxiv'25=[TritonForge: Profiling-Guided Framework for Automated Triton Kernel Optimization](https://arxiv.org/abs/2512.09196)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/RLsys-Foundation/TritonForge?style=social)](https://github.com/RLsys-Foundation/TritonForge)
 - arxiv'25-[EVOENGINEER: MASTERING AUTOMATED CUDA KERNEL CODE EVOLUTION WITH LARGE LANGUAGE MODELS](https://arxiv.org/pdf/2510.03760)– 🔒
-- arvix'25-[From Large to Small: Transferring CUDA Optimization Expertise via Reasoning Graph](https://arxiv.org/abs/2510.19873)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/anonymous.4open.science/r/ReGraphT-1A47?style=social)](https://anonymous.4open.science/r/ReGraphT-1A47)
+- arvix'25-[From Large to Small: Transferring CUDA Optimization Expertise via Reasoning Graph](https://arxiv.org/abs/2510.19873)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/blacknickwield/ReGraphT?style=social)](https://github.com/blacknickwield/ReGraphT)
 - arxiv'25-[KernelBand: Boosting LLM-based Kernel Optimization with a Hierarchical and Hardware-aware Multi-armed Bandit](https://arxiv.org/abs/2511.18868)– 🔒
 
 
@@ -67,8 +67,7 @@ repo)[![GitHub stars](https://img.shields.io/github/stars/haozixu/llama.cpp-npu?
 - arxiv'25-[NPUEval: Optimizing NPU Kernels with LLMs and Open Source Compilers](https://arxiv.org/abs/2507.14403)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/Scientific-Computing-Lab/ParallelCodeEstimation?style=social)](https://github.com/Scientific-Computing-Lab/ParallelCodeEstimation)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/AMDResearch/NPUEval?style=social)](https://github.com/AMDResearch/NPUEval)
 - arxiv'25-[Towards robust agentic cuda kernel benchmarking, verification, and optimization](https://arxiv.org/abs/2509.14279)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/SakanaAI/robust-kbench?style=social)](https://github.com/SakanaAI/robust-kbench)
 - github-[BackendBanch](https://github.com/meta-pytorch/BackendBench)
-- arxiv.25'-[ConCuR: Conciseness Makes State-of-the-Art Kernel Generation](https://arxiv.org/abs/2510.07356)– ![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fmodels%2F{model_id}&query=%24.downloads&logo=huggingface&label=downloads)
-(https://huggingface.co/lkongam/KernelCoder)
+- arxiv.25'-[ConCuR: Conciseness Makes State-of-the-Art Kernel Generation](https://arxiv.org/abs/2510.07356)– 🔓 (https://huggingface.co/lkongam/KernelCoder)
 
 
 ---
