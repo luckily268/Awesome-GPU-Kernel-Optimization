@@ -153,3 +153,13 @@ For detailed guidelines, please refer to [CONTRIBUTING.md](./CONTRIBUTING.md).
 © 2025 Awesome GPU Kernel Optimization. Licensed under the MIT License.  
 See [LICENSE](./LICENSE).
 
+## Citation
+
+```bib
+@article{DLKernel,
+  title={Recent Advances in Deep Learning Kernel Optimization Using Large Language Models},
+  author={Tianlin Li, Chenxi Yang, Qitong Sun, Xiaoyu Zhang, Qiang Hu, Zhe Tang, Sheng Chen, Fei Yang, Aishan Liu, Xianglong Liu, Yves Le Traon, Yang Liu},
+  year={2025}
+  url={https://github.com/luckily268/Awesome-GPU-Kernel-Optimization/Recent_Advances_in_Deep_Learning_Kernel_Optimization_Using_Large_Language_Models.pdf}
+}
+```
