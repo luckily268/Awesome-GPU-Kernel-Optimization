@@ -37,7 +37,7 @@ This repository collects key research works, frameworks, and open-source project
 - arxiv'25-[STARK:StrategicTeamofAgentsforRefining Kernels](https://arxiv.org/abs/2510.16996)– 🔒
 - arxiv'25-[CudaForge: An Agent Framework with Hardware Feedback for CUDA Kernel Optimization](https://arxiv.org/abs/2511.01884)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/OptimAI-Lab/CudaForge?style=social)](https://github.com/OptimAI-Lab/CudaForge)
 - arxiv'25-[KForge: Program Synthesis for Diverse AI Hardware Accelerators](https://arxiv.org/abs/2511.13274)– 🔒
-- github-[AKG](https://atomgit.com/mindspore/akg)
+- github-[AKG KERNEL AGENT: A MULTI-AGENT FRAMEWORK FOR CROSS-PLATFORM KERNEL SYNTHESIS](https://arxiv.org/pdf/2512.23424v1)– 🔓 (https://atomgit.com/mindspore/akg)
 - Technical report, Sakana AI, 02 2025-[The AI CUDA engineer: Agentic CUDA kernel discovery, optimization and composition](https://pub.sakana.ai/static/paper.pdf)– 🔒
 - KernelFalcon-[KernelFalcon: Autonomous GPU Kernel Generation via Deep Agents](https://pytorch.org/blog/kernelfalcon-autonomous-gpu-kernel-generation-via-deep-agents/)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/meta-pytorch/KernelAgent?style=social)](https://github.com/meta-pytorch/KernelAgent)
 - arxiv'25-[Optimizing PyTorch Inference with LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2511.16964)– 🔒
