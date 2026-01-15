@@ -160,6 +160,6 @@ See [LICENSE](./LICENSE).
   title={Recent Advances in Deep Learning Kernel Optimization Using Large Language Models},
   author={Tianlin Li, Chenxi Yang, Qitong Sun, Xiaoyu Zhang, Qiang Hu, Zhe Tang, Sheng Chen, Fei Yang, Aishan Liu, Xianglong Liu, Yves Le Traon, Yang Liu},
   year={2025}
-  url={https://github.com/luckily268/Awesome-GPU-Kernel-Optimization/Recent_Advances_in_Deep_Learning_Kernel_Optimization_Using_Large_Language_Models.pdf}
+  url={https://github.com/luckily268/Awesome-GPU-Kernel-Optimization}
 }
 ```
