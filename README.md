@@ -42,6 +42,7 @@ This repository collects key research works, frameworks, and open-source project
 - KernelFalcon-[KernelFalcon: Autonomous GPU Kernel Generation via Deep Agents](https://pytorch.org/blog/kernelfalcon-autonomous-gpu-kernel-generation-via-deep-agents/)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/meta-pytorch/KernelAgent?style=social)](https://github.com/meta-pytorch/KernelAgent)
 - arxiv'25-[Optimizing PyTorch Inference with LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2511.16964)– 🔒
 - arxiv'25-[PRAGMA: A Profiling-Reasoned Multi-Agent Framework for Automatic Kernel Optimization](https://arxiv.org/abs/2511.06345)– 🔒
+- arxiv'25-[cuPilot: A Strategy-Coordinated Multi-agent Framework for CUDA Kernel Evolution](https://arxiv.org/abs/2512.16465)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/champloo2878/cuPilot-Kernels?style=social)](https://github.com/champloo2878/cuPilot-Kernels)
 
 #### 🎯Training-based Methods
 - arxiv'25(special for CUDA)-[Kevin: Multi-turn rl for generating cuda kernels](https://arxiv.org/abs/2507.11948)– 🔓 (https://huggingface.co/cognition-ai/Kevin-32B/tree/main)
