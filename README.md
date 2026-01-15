@@ -60,7 +60,7 @@ This repository collects key research works, frameworks, and open-source project
 repo)[![GitHub stars](https://img.shields.io/github/stars/haozixu/llama.cpp-npu?style=social)](https://github.com/haozixu/llama.cpp-npu) and (op library)[![GitHub stars](https://img.shields.io/github/stars/haozixu/htp-ops-lib?style=social)](https://github.com/haozixu/htp-ops-lib) 
 
 
-#### 💹Benchmark Suites & Datasets
+#### 💹Benchmark Suites
 - arxiv'25-[KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/abs/2502.10517)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/ScalingIntelligence/KernelBench?style=social)](https://github.com/ScalingIntelligence/KernelBench)
 - arxiv'25-[MultiKernelBench: A Multi-Platform Benchmark for Kernel Generation](https://arxiv.org/abs/2507.17773)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/wzzll123/MultiKernelBench?style=social)](https://github.com/wzzll123/MultiKernelBench)
 - HPDX'25-[Can Large Language Models Predict Parallel Code Performance](https://dl.acm.org/doi/abs/10.1145/3731545.3743645)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/Scientific-Computing-Lab/ParallelCodeEstimation?style=social)](https://github.com/Scientific-Computing-Lab/ParallelCodeEstimation)
@@ -68,6 +68,7 @@ repo)[![GitHub stars](https://img.shields.io/github/stars/haozixu/llama.cpp-npu?
 - arxiv'25-[Towards robust agentic cuda kernel benchmarking, verification, and optimization](https://arxiv.org/abs/2509.14279)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/SakanaAI/robust-kbench?style=social)](https://github.com/SakanaAI/robust-kbench)
 - github-[BackendBanch](https://github.com/meta-pytorch/BackendBench)
 - arxiv.25'-[ConCuR: Conciseness Makes State-of-the-Art Kernel Generation](https://arxiv.org/abs/2510.07356)– 🔓 (https://huggingface.co/lkongam/KernelCoder)
+- arxiv'26 - [FLASHINFER-BENCH: BUILDING THE VIRTUOUS CYCLE FOR AI-DRIVEN LLM SYSTEMS](https://arxiv.org/abs/2601.00227)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/flashinfer-ai/flashinfer-bench?style=social)](https://github.com/flashinfer-ai/flashinfer-bench)
 
 ---
 
