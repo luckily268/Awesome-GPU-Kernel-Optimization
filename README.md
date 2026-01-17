@@ -1,6 +1,6 @@
 # Awesome GPU Kernel Optimization
 This is the repository of survey on Deep Learning Kernel Generation. For details, please refer to:
-A Survey on Deep Learning Kernel Generation Using Large Language Models [paper]
+[Recent Advances in Deep Learning Kernel OptimizationUsing Large Language Models](./Recent Advances in Deep Learning Kernel OptimizationUsing Large Language Models.pdf)
 
 ## 🧩 Overview
 
