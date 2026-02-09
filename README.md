@@ -43,6 +43,7 @@ This repository collects key research works, frameworks, and open-source project
 - arxiv'25-[Optimizing PyTorch Inference with LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2511.16964)– 🔒
 - arxiv'25-[PRAGMA: A Profiling-Reasoned Multi-Agent Framework for Automatic Kernel Optimization](https://arxiv.org/abs/2511.06345)– 🔒
 - arxiv'25-[cuPilot: A Strategy-Coordinated Multi-agent Framework for CUDA Kernel Evolution](https://arxiv.org/abs/2512.16465)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/champloo2878/cuPilot-Kernels?style=social)](https://github.com/champloo2878/cuPilot-Kernels)
+- arxiv'26-[DR. KERNEL: Reinforcement Learning Done Right for Triton Kernel Generations](https://arxiv.org/abs/2602.05885)- 🔓 [![GitHub stars](https://img.shields.io/github/stars/hkust-nlp/KernelGYM?style=social)](https://github.com/hkust-nlp/KernelGYM)
 
 #### 🎯Training-based Methods
 - arxiv'25(special for CUDA)-[Kevin: Multi-turn rl for generating cuda kernels](https://arxiv.org/abs/2507.11948)– 🔓 (https://huggingface.co/cognition-ai/Kevin-32B/tree/main)
