@@ -46,6 +46,7 @@ This repository collects key research works, frameworks, and open-source project
 - arxiv'26-[DR. KERNEL: Reinforcement Learning Done Right for Triton Kernel Generations](https://arxiv.org/abs/2602.05885)- 🔓 [![GitHub stars](https://img.shields.io/github/stars/hkust-nlp/KernelGYM?style=social)](https://github.com/hkust-nlp/KernelGYM)
 - arxiv'26-[OptiML: An End-to-End Framework for Program Synthesis and CUDA Kernel Optimization](https://arxiv.org/pdf/2602.12305)– 🔒
 - arxiv'26-[KERNELBLASTER: CONTINUAL CROSS-TASK CUDA OPTIMIZATION VIA MEMORY-AUGMENTED IN-CONTEXT REINFORCEMENT LEARNING](https://arxiv.org/pdf/2602.14293)- 🔓 (The repository will be released in a subsequent revision.)
+- arxiv'26-[K-Search: LLMKernelGenerationviaCo-Evolving Intrinsic World Model](https://arxiv.org/pdf/2602.19128)- 🔓 [![GitHub stars](https://github.com/caoshiyi/K-Search?style=social)](https://github.com/caoshiyi/K-Search)
 
 #### 🎯Training-based Methods
 - arxiv'25(special for CUDA)-[Kevin: Multi-turn rl for generating cuda kernels](https://arxiv.org/abs/2507.11948)– 🔓 (https://huggingface.co/cognition-ai/Kevin-32B/tree/main)
