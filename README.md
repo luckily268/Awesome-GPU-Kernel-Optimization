@@ -47,6 +47,7 @@ This repository collects key research works, frameworks, and open-source project
 - arxiv'26-[OptiML: An End-to-End Framework for Program Synthesis and CUDA Kernel Optimization](https://arxiv.org/pdf/2602.12305)– 🔒
 - arxiv'26-[KERNELBLASTER: CONTINUAL CROSS-TASK CUDA OPTIMIZATION VIA MEMORY-AUGMENTED IN-CONTEXT REINFORCEMENT LEARNING](https://arxiv.org/pdf/2602.14293)- 🔓 (The repository will be released in a subsequent revision.)
 - arxiv'26-[K-Search: LLMKernelGenerationviaCo-Evolving Intrinsic World Model](https://arxiv.org/pdf/2602.19128)- 🔓 [![GitHub stars](https://github.com/caoshiyi/K-Search?style=social)](https://github.com/caoshiyi/K-Search)
+- arxiv'26-[CUDAAgent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation](https://arxiv.org/pdf/2602.24286)- 🔒 [Project Page](https://cuda-agent.github.io/)
 
 #### 🎯Training-based Methods
 - arxiv'25(special for CUDA)-[Kevin: Multi-turn rl for generating cuda kernels](https://arxiv.org/abs/2507.11948)– 🔓 (https://huggingface.co/cognition-ai/Kevin-32B/tree/main)
