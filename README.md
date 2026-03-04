@@ -74,7 +74,7 @@ repo)[![GitHub stars](https://img.shields.io/github/stars/haozixu/llama.cpp-npu?
 - github-[BackendBanch](https://github.com/meta-pytorch/BackendBench)
 - arxiv'25-[ConCuR: Conciseness Makes State-of-the-Art Kernel Generation](https://arxiv.org/abs/2510.07356)– 🔓 (https://huggingface.co/lkongam/KernelCoder) 
 - arxiv'26 - [FLASHINFER-BENCH: BUILDING THE VIRTUOUS CYCLE FOR AI-DRIVEN LLM SYSTEMS](https://arxiv.org/abs/2601.00227)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/flashinfer-ai/flashinfer-bench?style=social)](https://github.com/flashinfer-ai/flashinfer-bench)
-- arxiv'26-[CUDABench: Benchmarking LLMs for Text-to-CUDA Generation](https://arxiv.org/pdf/2603.02236)- 🔓 [![GitHub stars](https://github.com/CUDA-Bench/CUDABench)
+- arxiv'26-[CUDABench: Benchmarking LLMs for Text-to-CUDA Generation](https://arxiv.org/pdf/2603.02236)- 🔓 [![GitHub stars](https://img.shields.io/github/stars/CUDA-Bench/CUDABench?style=social)
 
 ---
 
