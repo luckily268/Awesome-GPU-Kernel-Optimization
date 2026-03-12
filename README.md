@@ -15,7 +15,7 @@ This repository collects key research works, frameworks, and open-source project
 > - Code: GitHub / HF / Official repo if available, otherwise marked as 🔒
 
 ## 📚 Contents
-📅 Last update on 2026/1/11
+📅 Last update on 2026/3/6
 ### 🔥🔥🔥Post-LLM Era: AI-based and LLM-driven Optimization
 #### 🤖Single-Agent Systems
 - arxiv'25-[KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/abs/2502.10517)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/ScalingIntelligence/KernelBench?style=social)](https://github.com/ScalingIntelligence/KernelBench)
