@@ -15,7 +15,7 @@ This repository collects key research works, frameworks, and open-source project
 > - Code: GitHub / HF / Official repo if available, otherwise marked as 🔒
 
 ## 📚 Contents
-📅 Last update on 2026/3/6
+📅 Last update on 2026/3/17
 ### 🔥🔥🔥Post-LLM Era: AI-based and LLM-driven Optimization
 #### 🤖Single-Agent Systems
 - arxiv'25-[KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/abs/2502.10517)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/ScalingIntelligence/KernelBench?style=social)](https://github.com/ScalingIntelligence/KernelBench)
@@ -27,6 +27,7 @@ This repository collects key research works, frameworks, and open-source project
 - arxiv'25-[EVOENGINEER: MASTERING AUTOMATED CUDA KERNEL CODE EVOLUTION WITH LARGE LANGUAGE MODELS](https://arxiv.org/pdf/2510.03760)– 🔒
 - arvix'25-[From Large to Small: Transferring CUDA Optimization Expertise via Reasoning Graph](https://arxiv.org/abs/2510.19873)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/blacknickwield/ReGraphT?style=social)](https://github.com/blacknickwield/ReGraphT)
 - arxiv'25-[KernelBand: Boosting LLM-based Kernel Optimization with a Hierarchical and Hardware-aware Multi-armed Bandit](https://arxiv.org/abs/2511.18868)– 🔒
+- arxiv'26-[KERNELFOUNDRY: HARDWARE-AWARE EVOLUTIONARY GPU KERNEL OPTIMIZATION](https://arxiv.org/abs/2603.12440)– 🔒
 
 
 #### 🤖🤖Multi-Agent Systems
@@ -76,6 +77,7 @@ repo)[![GitHub stars](https://img.shields.io/github/stars/haozixu/llama.cpp-npu?
 - arxiv'25-[ConCuR: Conciseness Makes State-of-the-Art Kernel Generation](https://arxiv.org/abs/2510.07356)– 🔓 (https://huggingface.co/lkongam/KernelCoder) 
 - arxiv'26 - [FLASHINFER-BENCH: BUILDING THE VIRTUOUS CYCLE FOR AI-DRIVEN LLM SYSTEMS](https://arxiv.org/abs/2601.00227)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/flashinfer-ai/flashinfer-bench?style=social)](https://github.com/flashinfer-ai/flashinfer-bench)
 - arxiv'26-[CUDABench: Benchmarking LLMs for Text-to-CUDA Generation](https://arxiv.org/pdf/2603.02236)- 🔓 [![GitHub stars](https://img.shields.io/github/stars/CUDA-Bench/CUDABench?style=social)
+- arxiv'26-[KernelCraft: Benchmarking for Agentic Close-to-Metal Kernel Generation on Emerging Hardware](https://arxiv.org/abs/2603.08721)– 🔒
 
 ---
 
