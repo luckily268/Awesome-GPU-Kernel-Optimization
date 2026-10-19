@@ -1,0 +1,2410 @@
+{
+  "title": "GPU 内核优化文献地图",
+  "snapshot": "2026-10-17",
+  "sourceName": "kernel_optimization_survey(20261015-132827).pdf",
+  "sourceVersion": "2026-10-15 修订稿",
+  "scope": "现有修订稿中的方法、benchmark 与新增段落；用于浏览的录入集合，不代表已重跑筛选后的最终纳入数量。",
+  "datePolicy": "表5月份为稿件记录，不视为独立核实的首发日期；原文 v1 提交日单独标识；修订版日期不代替首发。未知月份与存在年份冲突的研究单列。",
+  "dedupPolicy": "同一论文的 benchmark 与方法合并。AI CUDA Engineer / robust-kbench、AscendKernelGen / NPUKernelBench、PTXBench 均各计一项。两个 Kernel Foundry 按作者区分。",
+  "items": [
+    {
+      "id": "study-29",
+      "name": "AgentKernelArena",
+      "ref": 29,
+      "year": 2026,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "年份据综述参考文献；首次公开月份待核实",
+      "category": "alt",
+      "controllers": [],
+      "artifact": "HIP / Triton",
+      "benchmarks": [],
+      "summary": "196 个任务覆盖 HIP 优化、Triton 优化和 PyTorch→HIP，并测试未见形状。",
+      "rationale": "主要评估 AMD GPU 与 ROCm 生态；多语言任务不改变主要硬件目标。",
+      "roles": [
+        "benchmark"
+      ],
+      "evidence": "survey",
+      "pages": [
+        13
+      ],
+      "citation": "Sharareh Younesian, Wenwen Ouyang, Sina Rafati, Mehdi Rezagholizadeh, Sharon Zhou, Ji Liu, Yue Liu, Yuchen Yang, Hao Li, Ziqiong Liu, et al. 2026. AgentKernelArena: Generalization-Aware Benchmarking of GPU Kernel Optimization Agents. arXiv preprint arXiv:2605.16819 (2026).",
+      "url": "https://arxiv.org/abs/2605.16819",
+      "original": null,
+      "notes": []
+    },
+    {
+      "id": "study-99",
+      "name": "AI as a Compiler (TAIC)",
+      "ref": 99,
+      "year": 2026,
+      "month": 9,
+      "date": "2026-09-29",
+      "firstDate": "2026-09-29",
+      "dateBasis": "原文首页 arXiv v1 提交日（不等同于已证明最早的所有公开渠道）",
+      "category": "dsl",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "Triton → PTX",
+      "benchmarks": [
+        "Selected Triton kernels"
+      ],
+      "summary": "直接从 Triton 生成 PTX，借助执行验证与 profiling 迭代改进，绕过常规 lowering。",
+      "rationale": "按输入 DSL 与研究问题归入高级 DSL；输出是 PTX，存在 CUDA 生态重叠。稿件描述并行子代理。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "primary",
+      "pages": [
+        "28–29"
+      ],
+      "citation": "François Costa, Charly Castes, Thomas Bourgeat, and Azalia Mirhoseini. 2026. AI as a Compiler: Compiling Triton kernels without the Triton compiler. arXiv preprint arXiv:2609.36800 (2026).",
+      "url": "https://arxiv.org/abs/2609.36800",
+      "original": {
+        "name": "AI as a Compiler.pdf",
+        "pages": "1–2"
+      },
+      "notes": []
+    },
+    {
+      "id": "study-27",
+      "name": "AI CUDA Engineer / robust-kbench",
+      "ref": 27,
+      "year": 2025,
+      "month": 9,
+      "date": "2025-09",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "robust-kbench"
+      ],
+      "summary": "同时提出代理优化流程与鲁棒性测试，检查形状、初始化及前反向执行变化。",
+      "rationale": "同一研究同时承担方法与 benchmark 角色，合并为一个条目；表5归入 Multi-Agent。",
+      "roles": [
+        "method",
+        "benchmark"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Robert Tjarko Lange, Qi Sun, Aaditya Prasad, Maxence Faldor, Yujin Tang, and David Ha. 2025. Towards robust agentic cuda kernel benchmarking, verification, and optimization. arXiv preprint arXiv:2509.14279 (2025).",
+      "url": "https://arxiv.org/abs/2509.14279",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-44",
+      "name": "AKG Kernel Agent (AIKG)",
+      "ref": 44,
+      "year": 2025,
+      "month": 6,
+      "date": "2025-06",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "Triton / SWFT / CUDA C++ / C++ / TileLang",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "以多角色协作组织算子生成，支持多种内核实现语言。",
+      "rationale": "沿用表5的 CUDA 主分类与 Multi-Agent 标签；实际支持多后端，主分类边界仍需原文复核。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "MindSpore. 2025. Auto Kernel Generator (AKG). [Online]. Available: https://atomgit.com/mindspore/akg. Accessed: Dec. 18, 2025.",
+      "url": "https://atomgit.com/mindspore/akg",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-80",
+      "name": "ARGUS",
+      "ref": 80,
+      "year": 2026,
+      "month": 4,
+      "date": "2026-04",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "alt",
+      "controllers": [
+        "unknown"
+      ],
+      "artifact": "Pythonic tile DSL",
+      "benchmarks": [
+        "KernelBench L1–L2",
+        "GEMM",
+        "attention",
+        "MoE"
+      ],
+      "summary": "用数据流不变量、静态检查与反例约束 AMD 内核变换。",
+      "rationale": "AMD MI300X 为主要目标；planner–selector–lowerer–validator 是明确阶段，但当前证据不足以断言均为独立代理。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Haohui Mai, Xiaoyan Guo, Xiangyun Ding, Daifeng Li, Qiuchu Yu, Chenzhun Guo, Cong Wang, Jiacheng Zhao, Christos Kozyrakis, and Binhang Yuan. 2026. ARGUS: Agentic GPU Optimization Guided by Data-Flow Invariants. arXiv preprint arXiv:2604.18616 (2026).",
+      "url": "https://arxiv.org/abs/2604.18616",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-33",
+      "name": "AscendKernelGen / NPUKernelBench",
+      "ref": 33,
+      "year": 2026,
+      "month": 1,
+      "date": "2026-01",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "alt",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "AscendC",
+      "benchmarks": [
+        "NPUKernelBench"
+      ],
+      "summary": "提出 Ascend-CoT、KernelGen-LM 训练与 NPUKernelBench 评估。",
+      "rationale": "同一论文提出方法和 benchmark，合并计数；目标为 Ascend NPU，采用 SFT 与执行偏好 RL。",
+      "roles": [
+        "method",
+        "benchmark"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Xinzi Cao, Jianyang Zhai, Pengfei Li, Zhiheng Hu, Cen Yan, Bingxu Mu, Guanghuan Fang, Bin She, Jiayu Li, Yihan Su, et al. 2026. AscendKernelGen: A Systematic Study of LLM-Based Kernel Generation for Neural Processing Units. arXiv preprint arXiv:2601.07160 (2026).",
+      "url": "https://arxiv.org/abs/2601.07160",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-102",
+      "name": "AsmEvo",
+      "ref": 102,
+      "year": 2026,
+      "month": 8,
+      "date": "2026-08-21",
+      "firstDate": "2026-08-21",
+      "dateBasis": "原文首页 arXiv v1 提交日（不等同于已证明最早的所有公开渠道）",
+      "category": "alt",
+      "controllers": [
+        "single"
+      ],
+      "artifact": "AMDGPU assembly / code objects",
+      "benchmarks": [
+        "KernelBench-derived",
+        "AITer",
+        "vLLM",
+        "SGLang"
+      ],
+      "summary": "在二进制层面重组 AMD 内核，长程代理提出汇编修改，差分测试守护等价性。",
+      "rationale": "目标为 AMD；一个长程搜索代理结合确定性构建、资源和功能门控，归入 Single-Agent。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "primary",
+      "pages": [
+        "30–31"
+      ],
+      "citation": "Ji Liu, Puyuan Yang, Rongzhang Zheng, Fan Wang, Jinglin Wang, Muhammad A Awad, Mortis Huang, Andy Chang, Zekai Li, Zeping Li, et al. 2026. AsmEvo: Agentic Assembly-Level Optimization of AMD GPU Kernels with Functional Equivalence Verification. arXiv preprint arXiv:2608.20711 (2026).",
+      "url": "https://arxiv.org/abs/2608.20711",
+      "original": {
+        "name": "AsmEvo.pdf",
+        "pages": "1–2"
+      },
+      "notes": []
+    },
+    {
+      "id": "study-49",
+      "name": "Astra",
+      "ref": 49,
+      "year": 2025,
+      "month": 9,
+      "date": "2025-09",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "SGLang production kernels"
+      ],
+      "summary": "通过多代理分工优化生产场景中的 GPU 内核性能。",
+      "rationale": "沿用表5的 CUDA / Multi-Agent 分类；生产工作负载不构成额外的平台类别。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Anjiang Wei, Tianran Sun, Yogesh Seenichamy, Hang Song, Anne Ouyang, Azalia Mirhoseini, Ke Wang, and Alex Aiken. 2025. Astra: A multi-agent system for gpu kernel performance optimization. arXiv preprint arXiv:2509.07506 (2025).",
+      "url": "https://arxiv.org/abs/2509.07506",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-85",
+      "name": "AutoKernel",
+      "ref": 85,
+      "year": 2026,
+      "month": 3,
+      "date": "2026-03",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cross",
+      "controllers": [
+        "single"
+      ],
+      "artifact": "Triton / CUDA C++",
+      "benchmarks": [
+        "Custom transformer kernels",
+        "KernelBench integration"
+      ],
+      "summary": "先根据 Amdahl 瓶颈排序，再对候选修改执行保留或回退。",
+      "rationale": "多后端属平台维度；正文描述单一代理循环。KernelBench 集成不等于完整套件实测。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Jaber Jaber and Osama Jaber. 2026. AutoKernel: Autonomous GPU kernel optimization via iterative agent-driven search. arXiv preprint arXiv:2603.21331 (2026).",
+      "url": "https://arxiv.org/abs/2603.21331",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-68",
+      "name": "AutoTriton",
+      "ref": 68,
+      "year": 2025,
+      "month": 7,
+      "date": "2025-07",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "dsl",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "Triton",
+      "benchmarks": [
+        "KernelBench（Triton adaptation）",
+        "TritonBench"
+      ],
+      "summary": "通过强化学习提高自动 Triton 编程能力。",
+      "rationale": "目标语言为 Triton，方法主要贡献是模型训练。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Shangzhan Li, Zefan Wang, Ye He, Yuxuan Li, Qi Shi, Jianling Li, Yonggang Hu, Wanxiang Che, Xu Han, Zhiyuan Liu, et al. 2025. Autotriton: Automatic triton programming with reinforcement learning in llms. arXiv preprint arXiv:2507.05687 (2025).",
+      "url": "https://arxiv.org/abs/2507.05687",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-34",
+      "name": "BackendBench",
+      "ref": 34,
+      "year": 2025,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "年份据综述参考文献；首次公开月份待核实",
+      "category": "dsl",
+      "controllers": [],
+      "artifact": "Generated backend kernels",
+      "benchmarks": [],
+      "summary": "基于 OpInfo 与真实模型形状验证功能与运行性能，并考察多次尝试的成功率。",
+      "rationale": "沿用稿件4.1.2高级 DSL 分类；当前证据未确认具体代理控制器。",
+      "roles": [
+        "benchmark"
+      ],
+      "evidence": "survey",
+      "pages": [
+        13
+      ],
+      "citation": "Meta. 2025. BackendBench. [Online]. Available: https://github.com/meta-pytorch/BackendBench. Accessed: Dec. 21, 2025.",
+      "url": "https://github.com/meta-pytorch/BackendBench",
+      "original": null,
+      "notes": []
+    },
+    {
+      "id": "study-48",
+      "name": "Brabec et al.",
+      "ref": 48,
+      "year": 2025,
+      "month": 8,
+      "date": "2025-08",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "single"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "Histogram",
+        "Game of Life",
+        "k-NN"
+      ],
+      "summary": "分析优化提示和教学式指导如何影响推理模型的 CUDA 优化能力。",
+      "rationale": "稿件表5归为 Single-Agent；研究重点是提示引导下的模型优化行为。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Matyáš Brabec, Jiří Klepl, Michal Töpfer, and Martin Kruliš. 2025. Tutoring LLM into a Better CUDA Optimizer. In European Conference on Parallel Processing. Springer, 250–263.",
+      "url": null,
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-40",
+      "name": "Chen et al.",
+      "ref": 40,
+      "year": 2025,
+      "month": 2,
+      "date": "2025-02",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "single"
+      ],
+      "artifact": "GPU kernel（语言未报告）",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "将 DeepSeek-R1 与 H100 上的验证器组成反馈闭环，逐步修订内核。",
+      "rationale": "稿件表5列为 CUDA / Single-Agent；正文描述单一生成模型与确定性验证器，未报告具体内核语言。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Terry Chen, Bing Xu, and Kirthi Devleker. 2025. Automating GPU Kernel Generation with DeepSeek-R1 and Inference Time Scaling. Online: NVIDIA Blog, https://developer.nvidia.com/blog/automating-gpu-kernel-generation-with- deepseek-r1-and-inference-time-scaling/. Accessed: Nov. 11, 2025.",
+      "url": null,
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-83",
+      "name": "Chu et al. (MEP)",
+      "ref": 83,
+      "year": null,
+      "month": null,
+      "date": null,
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cross",
+      "controllers": [
+        "unknown"
+      ],
+      "artifact": "CUDA / HIP",
+      "benchmarks": [
+        "PolyBench",
+        "AMD APP SDK",
+        "HPC hotspots"
+      ],
+      "summary": "提取最小可执行程序，在低成本环境中优化热点，再集成回原应用。",
+      "rationale": "跨 CUDA / HIP；表5未给代理数量，且记录日期与参考文献年份不一致。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Ruifan Chu, Anbang Wang, Xiuxiu Bai, Shuai Liu, and Xiaoshe Dong. 2026. Gpu kernel optimization beyond full builds: An llm framework with minimal executable programs. In Pacific-Asia Conference on Knowledge Discovery and Data Mining. Springer, 300–311.",
+      "url": null,
+      "notes": [
+        "时间记录不一致：表5为 2025-12，参考文献为 2026。首次公开日期待核实，不纳入已定位的时间统计。"
+      ],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-32",
+      "name": "ComputeEval",
+      "ref": 32,
+      "year": 2025,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "年份据综述参考文献；首次公开月份待核实",
+      "category": "cuda",
+      "controllers": [],
+      "artifact": "CUDA",
+      "benchmarks": [],
+      "summary": "128 个 CUDA 编程问题覆盖实现、运行时与库；部分任务提供性能评估。",
+      "rationale": "目标为 CUDA 编程评估；不是具有固定代理控制器的优化方法。",
+      "roles": [
+        "benchmark"
+      ],
+      "evidence": "survey",
+      "pages": [
+        12
+      ],
+      "citation": "NVIDIA. 2025. compute-eval. [Online]. Available: https://github.com/NVIDIA/compute-eval. Accessed: Dec. 21, 2025.",
+      "url": "https://github.com/NVIDIA/compute-eval",
+      "original": null,
+      "notes": []
+    },
+    {
+      "id": "study-51",
+      "name": "ConCuR",
+      "ref": 51,
+      "year": 2025,
+      "month": 10,
+      "date": "2025-10",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "通过强调简洁性的模型训练改善内核生成。",
+      "rationale": "稿件表5将其列为 Training-based，目标实现为 CUDA。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Lingcheng Kong, Jiateng Wei, Hanzhang Shen, and Huan Wang. 2025. ConCuR: Conciseness Makes State-of-the-Art Kernel Generation. arXiv preprint arXiv:2510.07356 (2025).",
+      "url": "https://arxiv.org/abs/2510.07356",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-61",
+      "name": "CUDA Agent",
+      "ref": 61,
+      "year": 2026,
+      "month": 2,
+      "date": "2026-02",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "通过大规模代理强化学习训练高性能 CUDA 内核生成策略。",
+      "rationale": "按主要贡献标为 Training-based；工具调用和代理 rollout 不改变参数训练这一主轴。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Weinan Dai, Hanlin Wu, Qiying Yu, Huan-ang Gao, Jiahao Li, Chengquan Jiang, Weiqiang Lou, Yufan Song, Hongli Yu, Jiaze Chen, et al. 2026. Cuda agent: Large-scale agentic rl for high-performance cuda kernel generation. arXiv preprint arXiv:2602.24286 (2026).",
+      "url": "https://arxiv.org/abs/2602.24286",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-93",
+      "name": "CUDA-Harness",
+      "ref": 93,
+      "year": 2026,
+      "month": 8,
+      "date": "2026-08-30",
+      "firstDate": "2026-08-30",
+      "dateBasis": "原文首页 arXiv v1 提交日（不等同于已证明最早的所有公开渠道）",
+      "category": "cuda",
+      "controllers": [
+        "single"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "CUDABench",
+        "CUDA-LLM task suite"
+      ],
+      "summary": "从自然语言意图生成结构化规格，合成独立测试，再依据反馈逐步优化。",
+      "rationale": "目标为 CUDA；生成、验证和演化是流程组件，当前正文未证明它们为独立自治代理，Single-Agent 为暂定编码。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "primary",
+      "pages": [
+        "20"
+      ],
+      "citation": "Qi Fan, An Zou, and Yehan Ma. 2026. CUDA-Harness: Harnessing Agentic CUDA Kernel Generation and Optimization from Natural Language. arXiv preprint arXiv:2609.00058 (2026).",
+      "url": "https://arxiv.org/abs/2609.00058",
+      "original": {
+        "name": "CUDA-Harness.pdf",
+        "pages": "1–2"
+      },
+      "notes": [
+        "当前控制器或具体语言编码仍为暂定，依据及限制见分类说明。"
+      ]
+    },
+    {
+      "id": "study-46",
+      "name": "CUDA-L1",
+      "ref": 46,
+      "year": 2025,
+      "month": 7,
+      "date": "2025-07",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "以监督学习与对比强化学习提高 CUDA 内核优化能力。",
+      "rationale": "目标为 CUDA，并通过训练更新模型参数；按主要贡献标记 Training-based。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Xiaoya Li, Albert Wang, Guoyin Wang, Jiwei Li, and Chris Shum. 2025. Cuda-l1: Improving cuda optimization via contrastive reinforcement learning. arXiv preprint arXiv:2507.14111 (2025).",
+      "url": "https://arxiv.org/abs/2507.14111",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-41",
+      "name": "CUDA-LLM",
+      "ref": 41,
+      "year": 2025,
+      "month": 6,
+      "date": "2025-06",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "single"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "KernelBench",
+        "CUDA Samples",
+        "LeetGPU"
+      ],
+      "summary": "将编译、功能验证和运行性能分离为反馈组件，指导后续代码修订。",
+      "rationale": "输出 CUDA，核心是一个 LLM 在验证反馈下迭代；FSR 的命名不等于参数级强化学习。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Wentao Chen, Jiace Zhu, Qi Fan, Yehan Ma, and An Zou. 2025. Cuda-llm: Llms can write efficient cuda kernels. arXiv preprint arXiv:2506.09092 (2025).",
+      "url": "https://arxiv.org/abs/2506.09092",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-30",
+      "name": "CUDABench",
+      "ref": 30,
+      "year": 2026,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "年份据综述参考文献；首次公开月份待核实",
+      "category": "cuda",
+      "controllers": [],
+      "artifact": "Text → CUDA",
+      "benchmarks": [],
+      "summary": "500 个任务与三种难度的自然语言描述，评估编译、功能与性能。",
+      "rationale": "任务形式为 text-to-CUDA，归入 CUDA 生态。",
+      "roles": [
+        "benchmark"
+      ],
+      "evidence": "survey",
+      "pages": [
+        12
+      ],
+      "citation": "Jiace Zhu, Wentao Chen, Qi Fan, Zhixing Ren, Junying Wu, Xing Zhe Chai, Chotiwit Rungrueangwutthinon, Yehan Ma, and An Zou. 2026. Cudabench: Benchmarking llms for text-to-cuda generation. arXiv preprint arXiv:2603.02236 (2026).",
+      "url": "https://arxiv.org/abs/2603.02236",
+      "original": null,
+      "notes": []
+    },
+    {
+      "id": "study-28",
+      "name": "CudaForge",
+      "ref": 28,
+      "year": 2025,
+      "month": 10,
+      "date": "2025-10",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "KernelBench（抽样）"
+      ],
+      "summary": "Coder 与 Judge 结合 Nsight Compute 硬件反馈，迭代生成、修复和优化 CUDA。",
+      "rationale": "两个明确的 LLM 角色组成协作闭环；无需训练的协作搜索归为 Multi-Agent。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Zijian Zhang, Rong Wang, Shiyang Li, Yuebo Luo, Mingyi Hong, and Caiwen Ding. 2025. CudaForge: An Agent Framework with Hardware Feedback for CUDA Kernel Optimization. arXiv preprint arXiv:2511.01884 (2025).",
+      "url": "https://arxiv.org/abs/2511.01884",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-64",
+      "name": "CuTeGen",
+      "ref": 64,
+      "year": 2026,
+      "month": 4,
+      "date": "2026-04",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "unknown"
+      ],
+      "artifact": "CuTe-based CUDA C++",
+      "benchmarks": [
+        "KernelBench L1–L2"
+      ],
+      "summary": "在 CuTe 抽象上执行正确性优先的生成与修订，并延迟使用细粒度 profiling。",
+      "rationale": "平台沿用 Structured CUDA Abstractions；该分支与代理数量不是同一维度，控制器待原文确认。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Tara Saba, Zhiyang Chen, Jikai Jason Li, Anne Ouyang, Xujie Si, and Fan Long. 2026. CuTeGen: An LLM-Based Agentic Framework for Generation and Optimization of High-Performance GPU Kernels using CuTe. arXiv preprint arXiv:2604.01489 (2026).",
+      "url": "https://arxiv.org/abs/2604.01489",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-d2k",
+      "name": "D2K-Bench",
+      "ref": null,
+      "year": 2026,
+      "month": 10,
+      "date": "2026-10-02",
+      "firstDate": "2026-10-02",
+      "dateBasis": "原文首页 arXiv v1 提交日",
+      "category": "dsl",
+      "controllers": [],
+      "artifact": "Triton（论文实验）",
+      "benchmarks": [],
+      "summary": "26 个任务、85 个工作负载，以有无专家指导的配对实验诊断设计到实现的差距。",
+      "rationale": "原文第2页明确实验使用 Triton；稿件4.1.1放在 CUDA 类。此处按实验语言归入高级 DSL，并保留分类差异。",
+      "roles": [
+        "benchmark"
+      ],
+      "evidence": "primary",
+      "pages": [
+        12
+      ],
+      "citation": "Daifeng Li et al. 2026. D2K-Bench: Can LLM Agents Turn Expert Designs into Efficient GPU Kernels? arXiv:2610.03226",
+      "url": "https://arxiv.org/abs/2610.03226",
+      "original": {
+        "name": "D2K-Bench.pdf",
+        "pages": "1–2"
+      },
+      "notes": [
+        "分类差异：修订稿将本研究列于 CUDA-centric；原文实验采用 Triton。本站优先采用已读原文证据。"
+      ]
+    },
+    {
+      "id": "study-89",
+      "name": "daVinci-kernel",
+      "ref": 89,
+      "year": 2026,
+      "month": 6,
+      "date": "2026-06",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cross",
+      "controllers": [
+        "training",
+        "multi"
+      ],
+      "artifact": "Triton / CUDA",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "共同训练技能选择、优化和技能总结代理，使优化策略与技能库一起演化。",
+      "rationale": "明确存在三个代理角色，且通过多轮 RL 更新模型；两个控制器标签同时成立。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Dayuan Fu, Mohan Jiang, Tongyu Wang, Dian Yang, Jiarui Hu, Liming Liu, Jinlong Hou, and Pengfei Li. 2026. daVinci- kernel: Co-Evolving Skill Selection, Summarization, and Utilization via RL for GPU Kernel Optimization. arXiv preprint arXiv:2606.16497 (2026).",
+      "url": "https://arxiv.org/abs/2606.16497",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-76",
+      "name": "Dr. Kernel",
+      "ref": 76,
+      "year": 2026,
+      "month": 2,
+      "date": "2026-02",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "dsl",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "Triton",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "借助 KernelGYM、TRLOO 与 profiling 奖励训练多轮 Triton 优化策略。",
+      "rationale": "强化学习直接更新参数；KernelGYM 的工具反馈不作为 Multi-Agent 的充分依据。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Wei Liu, Jiawei Xu, Yingru Li, Longtao Zheng, Tianjian Li, Qian Liu, and Junxian He. 2026. Dr. Kernel: Reinforcement Learning Done Right for Triton Kernel Generations. arXiv preprint arXiv:2602.05885 (2026).",
+      "url": "https://arxiv.org/abs/2602.05885",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-52",
+      "name": "EvoENGINEER",
+      "ref": 52,
+      "year": 2025,
+      "month": 10,
+      "date": "2025-10",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "single"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "AI CUDA Engineer Archive（91 kernels）"
+      ],
+      "summary": "把代码演化拆解为遍历策略与种群管理，用历史实现和优化洞见组织搜索。",
+      "rationale": "沿用表5的 Single-Agent 标签；种群搜索不等同于多个自治 LLM 代理。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Ping Guo, Chenyu Zhu, Siyuan Chen, Fei Liu, Xi Lin, Zhichao Lu, and Qingfu Zhang. 2025. EvoEngineer: Mastering Automated CUDA Kernel Code Evolution with Large Language Models. arXiv preprint arXiv:2510.03760 (2025).",
+      "url": "https://arxiv.org/abs/2510.03760",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-35",
+      "name": "FlashInfer-Bench",
+      "ref": 35,
+      "year": 2026,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "年份据综述参考文献；首次公开月份待核实",
+      "category": "cuda",
+      "controllers": [],
+      "artifact": "Production LLM kernels",
+      "benchmarks": [],
+      "summary": "用 Trace 连接真实服务工作负载、实现和不可变评估记录，并支持内核替换。",
+      "rationale": "原稿单列 Production Benchmarks；本站以 CUDA 生态承载并保留“生产场景”标签，不隐藏原分类。",
+      "roles": [
+        "benchmark"
+      ],
+      "evidence": "survey",
+      "pages": [
+        12
+      ],
+      "citation": "Shanli Xing, Yiyan Zhai, Alexander Jiang, Yixin Dong, Yong Wu, Zihao Ye, Charlie Ruan, Yingyi Huang, Yineng Zhang, Liangsheng Yin, et al. 2026. FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems. arXiv preprint arXiv:2601.00227 (2026).",
+      "url": "https://arxiv.org/abs/2601.00227",
+      "original": null,
+      "notes": [
+        "原稿类别：Production Benchmarks；本站五类视图暂放在 CUDA 生态，作为网站组织编码而非原稿等价分类。"
+      ]
+    },
+    {
+      "id": "study-69",
+      "name": "GEAK",
+      "ref": 69,
+      "year": 2025,
+      "month": 7,
+      "date": "2025-07",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "dsl",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "Triton",
+      "benchmarks": [
+        "TritonBench-revised",
+        "ROCm Triton Benchmark"
+      ],
+      "summary": "Generator、Evaluator、Reflector 与 Optimizer 在闭环中协作。",
+      "rationale": "表5及产物列支持高级 DSL；正文局部写 CUDA 与产物列不一致，此处保留该差异提示。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Jianghui Wang, Vinay Joshi, Saptarshi Majumder, Xu Chao, Bin Ding, Ziqiong Liu, Pratik Prabhanjan Brahma, Dong Li, Zicheng Liu, and Emad Barsoum. 2025. Geak: Introducing triton kernel ai agent & evaluation benchmarks. arXiv preprint arXiv:2507.23194 (2025).",
+      "url": "https://arxiv.org/abs/2507.23194",
+      "notes": [
+        "稿件正文局部称 CUDA，而表5产物为 Triton；本图沿用表5分类，待作者确认。"
+      ],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-87",
+      "name": "GPU Forecasters",
+      "ref": 87,
+      "year": 2026,
+      "month": 5,
+      "date": "2026-05",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cross",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "Runtime / speedup forecasts",
+      "benchmarks": [
+        "GPU MODE",
+        "KernelBench L3（辅助）"
+      ],
+      "summary": "以经过校准的速度预测作为 GPU 实测的选择性替代，优先评估有潜力的候选。",
+      "rationale": "面向 Triton / CUDA 候选；通过 RL 训练预测器，主要产物为预测而非完整内核。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Zaid Khan, Justin Chih-Yao Chen, Jaemin Cho, Elias Stengel-Eskin, and Mohit Bansal. 2026. GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization. arXiv preprint arXiv:2605.31464 (2026).",
+      "url": "https://arxiv.org/abs/2605.31464",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-79",
+      "name": "GPU Kernel Scientist",
+      "ref": 79,
+      "year": 2025,
+      "month": 6,
+      "date": "2025-06",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "alt",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "HIP",
+      "benchmarks": [
+        "AMD Developer Challenge（low-precision GEMM）"
+      ],
+      "summary": "Designer、Writer 与 Tester 在假设—实验—验证循环中优化 AMD 内核。",
+      "rationale": "按硬件目标归入替代加速器；三个明确角色支持 Multi-Agent。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Martin Andrews and Sam Witteveen. 2025. Gpu kernel scientist: An llm-driven framework for iterative kernel optimization. arXiv preprint arXiv:2506.20807 (2025).",
+      "url": "https://arxiv.org/abs/2506.20807",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-hiera",
+      "name": "HIERA",
+      "ref": null,
+      "year": 2026,
+      "month": 8,
+      "date": "2026-08-21",
+      "firstDate": "2026-08-21",
+      "dateBasis": "原文首页 arXiv v1 提交日（不等同于已证明最早的所有公开渠道）",
+      "category": "cuda",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "PyTorch / CUDA libraries / CUDA",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "先选择实现空间，再由策略规划与优化代理执行逐层细化。",
+      "rationale": "选择空间、策略规划、优化三个代理分工明确；主要目标为 CUDA 生态，并非跨不同加速器。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "primary",
+      "pages": [
+        "24"
+      ],
+      "citation": "Jinghao Wang et al. 2026. HIERA: Workload-Aware Planning Across Implementation Spaces for GPU Kernel Optimization. arXiv:2608.21157",
+      "url": "https://arxiv.org/abs/2608.21157",
+      "original": {
+        "name": "HIERA.pdf",
+        "pages": "1–2"
+      },
+      "notes": []
+    },
+    {
+      "id": "study-60",
+      "name": "K-Search",
+      "ref": 60,
+      "year": 2026,
+      "month": 2,
+      "date": "2026-02",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "single"
+      ],
+      "artifact": "CUDA / Triton",
+      "benchmarks": [
+        "FlashInfer-Bench",
+        "GPU MODE TriMul"
+      ],
+      "summary": "以共同演化的世界模型维护优化意图树，再局部实例化与评估内核。",
+      "rationale": "稿件将其归于 CUDA / Single-Agent；区分高层规划与低层实例化并不必然形成多代理。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Shiyi Cao, Ziming Mao, Joseph E Gonzalez, and Ion Stoica. 2026. K-search: Llm kernel generation via co-evolving intrinsic world model. arXiv preprint arXiv:2602.19128 (2026).",
+      "url": "https://arxiv.org/abs/2602.19128",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-65",
+      "name": "KEET",
+      "ref": 65,
+      "year": 2026,
+      "month": 5,
+      "date": "2026-05",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "CUDA profiling explanations",
+      "benchmarks": [
+        "Rodinia",
+        "LULESH",
+        "XSBench"
+      ],
+      "summary": "把性能分析数据转化为自然语言瓶颈解释与优化建议。",
+      "rationale": "表5归入 Multi-Agent；产物主要为诊断信息，不能据此宣称其独立生成完整内核。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Joshua H Davis, Klaudiusz Rydzy, Srinivasan Ramesh, Aadit Nilay, Daniel Nichols, Swapna Raj, Nikhil Jain, and Abhi- nav Bhatele. 2026. KEET: Explaining Performance of GPU Kernels Using LLM Agents. arXiv preprint arXiv:2605.04467 (2026).",
+      "url": "https://arxiv.org/abs/2605.04467",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-78",
+      "name": "Kernel Foundry (Huang et al.)",
+      "ref": 78,
+      "year": 2026,
+      "month": 5,
+      "date": "2026-05",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "dsl",
+      "controllers": [
+        "single"
+      ],
+      "artifact": "Triton",
+      "benchmarks": [
+        "KernelBench L1–L2"
+      ],
+      "summary": "通过诊断驱动的演化优化组合多种专家知识。",
+      "rationale": "沿用表5的 Single-Agent；标题中的 Multi-Experts 与多个自治代理不能直接画等号，尚待原文复核。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Zixuan Huang, Da Chen, Kecheng Huang, Lihao Yin, Xing Li, Huiling Zhen, Mingxuan Yuan, and Zili Shao. 2026. Kernel Foundry: A Diagnosis-driven Evolutionary Kernel Optimizer with Multi-Experts. arXiv preprint arXiv:2605.30359 (2026).",
+      "url": "https://arxiv.org/abs/2605.30359",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-84",
+      "name": "Kernel-Smith",
+      "ref": 84,
+      "year": 2026,
+      "month": 3,
+      "date": "2026-03",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cross",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "Triton / MACA",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "结合种群演化搜索与 SFT、RL，将有效修订轨迹转为模型训练数据。",
+      "rationale": "评估跨 NVIDIA 与 MetaX；显式后训练支持 Training-based，同时存在推理期搜索。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "He Du, Qiming Ge, Jiakai Hu, Aijun Yang, Zheng Cai, Zixian Huang, Sheng Yuan, Qinxiu Cheng, Xinchen Xie, Yicheng Chen, et al. 2026. Kernel-smith: A unified recipe for evolutionary kernel optimization. arXiv preprint arXiv:2603.28342 (2026).",
+      "url": "https://arxiv.org/abs/2603.28342",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-77",
+      "name": "KernelAgent",
+      "ref": 77,
+      "year": 2026,
+      "month": 3,
+      "date": "2026-03",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "dsl",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "Triton",
+      "benchmarks": [
+        "KernelBench L1"
+      ],
+      "summary": "由管理器协调瓶颈诊断、优化建议与并行 worker，利用硬件反馈改进内核。",
+      "rationale": "表5明确 Multi-Agent，主要输出 Triton；不同于 CUDA Agent。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Kaiming Cheng, Laura Wang, Jack Khuu, Mark Saroufim, Wenyuan Chi, Jiannan Wang, and Joe Isaacson. 2026. KernelAgent: Hardware-Guided GPU Kernel Optimization via Multi-Agent Orchestration. PyTorch Blog, https://pytorch. org/blog/kernelagent-hardware-guided-gpu-kerneloptimization-via-multi-agent-orchestration (2026).",
+      "url": null,
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-95",
+      "name": "KernelArc",
+      "ref": 95,
+      "year": 2026,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "仅已见修订版日期；首次公开月份待核实",
+      "category": "cuda",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "CUDA / PTX / libraries",
+      "benchmarks": [
+        "SOL-ExecBench workloads"
+      ],
+      "summary": "策略专门化代理并行探索，以共享记忆交换经过验证的结论。",
+      "rationale": "多代理协作明确。主要归入 CUDA 生态；论文也允许 DSL 和库配置搜索，分类具有重叠。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "primary",
+      "pages": [
+        "24"
+      ],
+      "citation": "Joyjit Kundu, Ben Stoffelen, Kaili Wang, Peter Vrancx, and Ludovic Denoyer. 2026. KernelArc: A Multi-Agent Framework for GPU Kernel Optimization. arXiv preprint arXiv:2608.17071 (2026).",
+      "url": "https://arxiv.org/abs/2608.17071",
+      "original": {
+        "name": "KernelArc.pdf",
+        "pages": "1–2"
+      },
+      "notes": [
+        "当前材料是 v2；修订日期不替代首次公开日期，因此时间视图保留在“月份待核实”区域。"
+      ]
+    },
+    {
+      "id": "study-71",
+      "name": "KernelBand",
+      "ref": 71,
+      "year": 2025,
+      "month": 11,
+      "date": "2025-11",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "dsl",
+      "controllers": [
+        "single"
+      ],
+      "artifact": "Triton",
+      "benchmarks": [
+        "TritonBench（子集）"
+      ],
+      "summary": "使用层次化、硬件感知的多臂老虎机分配内核优化预算。",
+      "rationale": "按表5归为 Single-Agent；多个 bandit arms 不是多个 LLM 代理。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Dezhi Ran, Shuxiao Xie, Mingfang Ji, Ziyue Hua, Mengzhou Wu, Yuan Cao, Yuzhe Guo, Yu Hao, Linyi Li, Yitao Hu, et al. 2025. KernelBand: Boosting LLM-based Kernel Optimization with a Hierarchical and Hardware-aware Multi-armed Bandit. arXiv preprint arXiv:2511.18868 (2025).",
+      "url": "https://arxiv.org/abs/2511.18868",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-13",
+      "name": "KernelBench",
+      "ref": 13,
+      "year": 2025,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "年份据综述参考文献；首次公开月份待核实",
+      "category": "cuda",
+      "controllers": [],
+      "artifact": "CUDA / kernel replacement",
+      "benchmarks": [],
+      "summary": "270 个任务覆盖多个难度层级，以功能正确性与 fast_p 速度指标建立基础评估。",
+      "rationale": "稿件4.1.1归入 CUDA；不同后续研究也可将任务改编到其他语言。",
+      "roles": [
+        "benchmark"
+      ],
+      "evidence": "survey",
+      "pages": [
+        12
+      ],
+      "citation": "Anne Ouyang, Simon Guo, Simran Arora, Alex L Zhang, William Hu, Christopher Ré, and Azalia Mirhoseini. 2025. Kernelbench: Can llms write efficient gpu kernels? arXiv preprint arXiv:2502.10517 (2025).",
+      "url": "https://arxiv.org/abs/2502.10517",
+      "original": null,
+      "notes": []
+    },
+    {
+      "id": "study-31",
+      "name": "KernelBenchX",
+      "ref": 31,
+      "year": 2026,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "年份据综述参考文献；首次公开月份待核实",
+      "category": "dsl",
+      "controllers": [],
+      "artifact": "Triton",
+      "benchmarks": [],
+      "summary": "176 个任务涵盖多种结构，评估调用、执行、速度、硬件效率及跨 GPU 表现。",
+      "rationale": "稿件将其归入高级 DSL；跨 NVIDIA GPU 的评估不直接等于跨编程生态。",
+      "roles": [
+        "benchmark"
+      ],
+      "evidence": "survey",
+      "pages": [
+        13
+      ],
+      "citation": "Han Wang, Jintao Zhang, Kai Jiang, Haoxu Wang, Jianfei Chen, and Jun Zhu. 2026. Kernelbenchx: A comprehensive benchmark for evaluating llm-generated gpu kernels. arXiv preprint arXiv:2605.04956 (2026).",
+      "url": "https://arxiv.org/abs/2605.04956",
+      "original": null,
+      "notes": []
+    },
+    {
+      "id": "study-62",
+      "name": "KernelBlaster",
+      "ref": 62,
+      "year": 2026,
+      "month": 2,
+      "date": "2026-02",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "以外部记忆积累跨任务的状态、策略与性能收益，支持持续优化。",
+      "rationale": "表5归入 Multi-Agent；in-context RL 不应直接等同于更新模型参数。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Kris Shengjun Dong, Sahil Modi, Dima Nikiforov, Sana Damani, Edward Lin, Siva Kumar Sastry Hari, and Chris- tos Kozyrakis. 2026. Kernelblaster: Continual cross-task cuda optimization via memory-augmented in-context reinforcement learning. arXiv preprint arXiv:2602.14293 (2026).",
+      "url": "https://arxiv.org/abs/2602.14293",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-37",
+      "name": "KernelCraft",
+      "ref": 37,
+      "year": 2026,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "年份据综述参考文献；首次公开月份待核实",
+      "category": "unseen",
+      "controllers": [],
+      "artifact": "Novel-ISA assembly",
+      "benchmarks": [],
+      "summary": "给代理提供新 ISA 文档、硬件配置与工具，评估低层汇编生成及性能。",
+      "rationale": "研究目标明确是适应此前未见的 ISA，不能仅按汇编语言归入 CUDA。",
+      "roles": [
+        "benchmark"
+      ],
+      "evidence": "survey",
+      "pages": [
+        14
+      ],
+      "citation": "Jiayi Nie, Haoran Wu, Yao Lai, Zeyu Cao, Cheng Zhang, Binglei Lou, Erwei Wang, Jianyi Cheng, Timothy M Jones, Robert Mullins, et al. 2026. Kernelcraft: Benchmarking for agentic close-to-metal kernel generation on emerging hardware. arXiv preprint arXiv:2603.08721 (2026).",
+      "url": "https://arxiv.org/abs/2603.08721",
+      "original": null,
+      "notes": []
+    },
+    {
+      "id": "study-72",
+      "name": "KernelFalcon",
+      "ref": 72,
+      "year": 2025,
+      "month": 11,
+      "date": "2025-11",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "dsl",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "Triton",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "通过深度代理工作流自主生成 GPU 内核。",
+      "rationale": "稿件表5归为高级 DSL / Multi-Agent，具体角色结构尚未独立复核。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Laura Wang and the PyTorch Team at Meta. 2025. KernelFalcon: Autonomous GPU Kernel Generation via Deep Agents. [Online]. Available: https://pytorch.org/blog/kernelfalcon-autonomous-gpu-kernel-generation-via-deep-agents/. Accessed: Nov. 11, 2025.",
+      "url": "https://pytorch.org/blog/kernelfalcon-autonomous-gpu-kernel-generation-via-deep-agents/",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-86",
+      "name": "KernelFoundry (Wiedemann et al.)",
+      "ref": 86,
+      "year": 2026,
+      "month": 3,
+      "date": "2026-03",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cross",
+      "controllers": [
+        "unknown"
+      ],
+      "artifact": "SYCL / CUDA / Triton",
+      "benchmarks": [
+        "KernelBench",
+        "robust-kbench",
+        "custom tasks"
+      ],
+      "summary": "使用 MAP-Elites 保持实现多样性，并共同演化优化提示与内核。",
+      "rationale": "多语言后端支持跨平台分类；种群和提示演化本身不足以确认代理数量。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Nina Wiedemann, Quentin Leboutet, Michael Paulitsch, Diana Wofk, and Benjamin Ummenhofer. 2026. KernelFoundry: Hardware-aware evolutionary GPU kernel optimization. arXiv preprint arXiv:2603.12440 (2026).",
+      "url": "https://arxiv.org/abs/2603.12440",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-67",
+      "name": "KernelLLM",
+      "ref": 67,
+      "year": 2025,
+      "month": 6,
+      "date": "2025-06",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "dsl",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "Triton",
+      "benchmarks": [
+        "KernelBench-Triton L1"
+      ],
+      "summary": "利用 KernelBook 中的 PyTorch–Triton 配对样本进行监督微调。",
+      "rationale": "输出 Triton，训练更新模型参数；归入高级 DSL / Training-based。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Zacharias V. Fisches, Sahan Paliskara, Simon Guo, Alex Zhang, Joe Spisak, Chris Cummins, Hugh Leather, Gabriel Synnaeve, Joe Isaacson, Aram Markosyan, and Mark Saroufim. 2025. KernelLLM: Making Kernel Development More Accessible. [Online]. Available: https://huggingface.co/facebook/KernelLLM. Accessed: Nov. 11, 2025.",
+      "url": "https://huggingface.co/facebook/KernelLLM",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-98",
+      "name": "KernelOPT",
+      "ref": 98,
+      "year": 2026,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "仅已见修订版日期；首次公开月份待核实",
+      "category": "dsl",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "Triton / Helion input",
+      "benchmarks": [
+        "KernelBench（250 tasks）"
+      ],
+      "summary": "保留编译器的库调度结构，用五个代理优化生成的 Triton 子内核并回接模型。",
+      "rationale": "原文明确五个 profiling-guided LLM agents；目标为 Inductor 生成的 Triton 子内核。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "primary",
+      "pages": [
+        "28"
+      ],
+      "citation": "Aheli Poddar, Sanskar Prasad, Arindam Samanta, Subha Chakraborty, Vishal Goyal, and Rohit Singh Rathaur. 2026. KernelOPT: Dispatch-Aware Agentic Search for GPU Kernel Optimization. arXiv preprint arXiv:2609.30059 (2026).",
+      "url": "https://arxiv.org/abs/2609.30059",
+      "original": {
+        "name": "KERNELOPT.pdf",
+        "pages": "1–2"
+      },
+      "notes": [
+        "当前材料是 v2；修订日期不替代首次公开日期，因此时间视图保留在“月份待核实”区域。"
+      ]
+    },
+    {
+      "id": "study-66",
+      "name": "KernelPro",
+      "ref": 66,
+      "year": 2026,
+      "month": 6,
+      "date": "2026-06",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "unknown"
+      ],
+      "artifact": "Raw CUDA + CuTe",
+      "benchmarks": [
+        "KernelBench",
+        "VeOmni MoE"
+      ],
+      "summary": "结合微观 profiling 专家代理工具与树搜索，在 CUDA 和 CuTe 中探索实现。",
+      "rationale": "原稿标签为 Structured CUDA Abstractions；工具、搜索节点与 LLM 代理的边界需复核，暂不填写代理数量。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Jiading Gai, Shuai Zhang, Kaj Bostrom, Jin Huang, Vihang Patil, Haoyang Fang, Bernie Wang, Huzefa Rangwala, and George Karypis. 2026. Optimizing CUDA like a Human: Micro-Profiling Tools as Expert Surrogates for LLM-Based GPU Kernel Optimization. arXiv preprint arXiv:2606.26453 (2026).",
+      "url": "https://arxiv.org/abs/2606.26453",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-63",
+      "name": "KernelSkill",
+      "ref": 63,
+      "year": 2026,
+      "month": 3,
+      "date": "2026-03",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "使用特征提取与长期专家技能、短期轨迹记忆指导多代理优化。",
+      "rationale": "核心为多角色协作与外部记忆；按稿件归入 CUDA / Multi-Agent。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Qitong Sun, Jun Han, Tianlin Li, Zhe Tang, Sheng Chen, Fei Yang, Aishan Liu, Xianglong Liu, and Yang Liu. 2026. Kernelskill: A multi-agent framework for gpu kernel optimization. arXiv preprint arXiv:2603.10085 (2026).",
+      "url": "https://arxiv.org/abs/2603.10085",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-106",
+      "name": "KernelZero",
+      "ref": 106,
+      "year": 2026,
+      "month": 9,
+      "date": "2026-09-27",
+      "firstDate": "2026-09-27",
+      "dateBasis": "原文首页 arXiv v1 提交日（不等同于已证明最早的所有公开渠道）",
+      "category": "cross",
+      "controllers": [
+        "training",
+        "multi"
+      ],
+      "artifact": "CUDA / Triton",
+      "benchmarks": [
+        "KernelBench L1–L2"
+      ],
+      "summary": "Proposer 生成能力边界附近的新任务，与 Coder 交替强化学习形成自适应课程。",
+      "rationale": "两个模型角色联合演化且采用 RL，保留两个标签；支持 CUDA 与 Triton，归入多后端而不宣称跨硬件实测。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "primary",
+      "pages": [
+        "33"
+      ],
+      "citation": "Changxin Ke, Rui Zhang, Zixiang Fang, Zhenghong Li, Yuanbo Wen, Jiashuo Shen, Shuo Wang, Jiaming Guo, Ling Li, Qi Guo, et al. 2026. KernelZero: Co-Evolving Proposer and Coder for Continuously Improved GPU Kernel Generation. arXiv preprint arXiv:2609.33074 (2026).",
+      "url": "https://arxiv.org/abs/2609.33074",
+      "original": {
+        "name": "KernelZero.pdf",
+        "pages": "1–2"
+      },
+      "notes": []
+    },
+    {
+      "id": "study-47",
+      "name": "Kevin",
+      "ref": 47,
+      "year": 2025,
+      "month": 7,
+      "date": "2025-07",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "通过多轮强化学习，让模型学习利用执行反馈修订 CUDA 内核。",
+      "rationale": "多轮 rollout 属于训练策略；并行轨迹不单独构成 Multi-Agent 的分类依据。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Carlo Baronio, Pietro Marsella, Ben Pan, Simon Guo, and Silas Alberti. 2025. Kevin: Multi-turn rl for generating cuda kernels. arXiv preprint arXiv:2507.11948 (2025).",
+      "url": "https://arxiv.org/abs/2507.11948",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-82",
+      "name": "KForge",
+      "ref": 82,
+      "year": 2025,
+      "month": 11,
+      "date": "2025-11",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cross",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "CUDA / Metal",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "将内核生成与性能分析分离，跨 NVIDIA CUDA 和 Apple Metal 复用流程。",
+      "rationale": "目标覆盖不同硬件与编程模型；正文明确 generation 与 performance-analysis 两类代理。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Taras Sereda, Tom St John, Burak Bartan, Natalie Serrino, Sachin Katti, and Zain Asgar. 2025. KForge: Program Synthesis for Diverse AI Hardware Accelerators. arXiv preprint arXiv:2511.13274 (2025).",
+      "url": "https://arxiv.org/abs/2511.13274",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-88",
+      "name": "KLINEAGE",
+      "ref": 88,
+      "year": 2026,
+      "month": 5,
+      "date": "2026-05",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cross",
+      "controllers": [
+        "unknown"
+      ],
+      "artifact": "CUDA / TileLang",
+      "benchmarks": [
+        "Expert workloads",
+        "FlagGems held-out tasks"
+      ],
+      "summary": "从经过验证的反向去优化步骤中提取可复用技能，再指导正向优化。",
+      "rationale": "支持多编程表面；外部技能获取与参数训练需区分，当前不推断代理数量。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Shuoming Zhang, Qiuchu Yu, Yangyu Zhang, Ruiyuan Xu, Xiyu Shi, Guangli Li, Xiaobing Feng, Huimin Cui, and Jiacheng Zhao. 2026. Learning When to Optimize: Verified Optimization Skills from Expert GPU-Kernel Lineages. arXiv preprint arXiv:2605.28213 (2026).",
+      "url": "https://arxiv.org/abs/2605.28213",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-96",
+      "name": "LEAP",
+      "ref": 96,
+      "year": 2026,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "仅已见修订版日期；首次公开月份待核实",
+      "category": "cuda",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "依据任务难度裁剪多轮训练交互，并奖励更早获得有效解的轨迹。",
+      "rationale": "原文明确以 CUDA 生成开展多轮 RL，属于参数训练；环境反馈不是独立代理。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "primary",
+      "pages": [
+        "25–26"
+      ],
+      "citation": "Tankun Li, Zhi Chen, and Yaohua Tang. 2026. LEAP: Lean Environment-Feedback via Adaptive Pruning for Code RL in GPU Kernel Generation. arXiv preprint arXiv:2608.01804 (2026).",
+      "url": "https://arxiv.org/abs/2608.01804",
+      "original": {
+        "name": "LEAP.pdf",
+        "pages": "1–2"
+      },
+      "notes": [
+        "当前材料是 v2；修订日期不替代首次公开日期，因此时间视图保留在“月份待核实”区域。"
+      ]
+    },
+    {
+      "id": "study-97",
+      "name": "LLM4LLM",
+      "ref": 97,
+      "year": 2026,
+      "month": 8,
+      "date": "2026-08-22",
+      "firstDate": "2026-08-22",
+      "dateBasis": "原文首页 arXiv v1 提交日（不等同于已证明最早的所有公开渠道）",
+      "category": "dsl",
+      "controllers": [
+        "single"
+      ],
+      "artifact": "GPU kernels（具体语言待复核）",
+      "benchmarks": [
+        "KernelBench L2",
+        "LLM inference workloads"
+      ],
+      "summary": "从真实推理脚本中提取热点，跨 episode 积累经验，并以模型内验证接受修改。",
+      "rationale": "稿件置于高级 DSL / Single-Agent；已读原文前两页确认闭环与部署目标，但具体输出语言仍待核实。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "primary",
+      "pages": [
+        "27"
+      ],
+      "citation": "Hui Zeng, Pengfei Yang, Yanxin Chen, Fusong Ju, and Xinran Wei. 2026. LLM4LLM: Bridging Kernel Benchmarks and Real Deployment via Closed-Loop Agentic Optimization. arXiv preprint arXiv:2608.21836 (2026).",
+      "url": "https://arxiv.org/abs/2608.21836",
+      "original": {
+        "name": "LLM4LLM.pdf",
+        "pages": "1–2"
+      },
+      "notes": [
+        "当前控制器或具体语言编码仍为暂定，依据及限制见分类说明。"
+      ]
+    },
+    {
+      "id": "study-105",
+      "name": "MaxKernel",
+      "ref": 105,
+      "year": 2026,
+      "month": 9,
+      "date": "2026-09-03",
+      "firstDate": "2026-09-03",
+      "dateBasis": "原文首页 arXiv v1 提交日（不等同于已证明最早的所有公开渠道）",
+      "category": "alt",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "JAX / Pallas",
+      "benchmarks": [
+        "JaxBench",
+        "production kernels"
+      ],
+      "summary": "以共享专业子代理支持人机协作、自主优化和图搜索三种 TPU 开发模式。",
+      "rationale": "尽管采用高级 DSL Pallas，主要研究对象为 TPU；明确多个专业子代理，归入替代加速器 / Multi-Agent。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "primary",
+      "pages": [
+        "31–32"
+      ],
+      "citation": "Shangkun Wang, Nina Cai, Charles Hoong, Julian Walker, Gerson Kroiz, George Vanica, Deepak Patil, Andi Gavrilescu, Hassan Sipra, and Sethu Sankaran. 2026. MaxKernel: Agentic Kernel Generation for TPUs. arXiv preprint arXiv:2609.04523 (2026).",
+      "url": "https://arxiv.org/abs/2609.04523",
+      "original": {
+        "name": "MaxKernel.pdf",
+        "pages": "1–2"
+      },
+      "notes": []
+    },
+    {
+      "id": "study-45",
+      "name": "Mishra & Nangia",
+      "ref": 45,
+      "year": 2025,
+      "month": 7,
+      "date": "2025-07",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "KernelBench（子集）"
+      ],
+      "summary": "探索协作式代理生成和优化 PyTorch 算子的 CUDA 实现。",
+      "rationale": "稿件表5归入 CUDA / Multi-Agent；当前未额外核实具体角色分工。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Shikhar Mishra and Ayush Nangia. 2025. How Many Agents Does it Take to Beat PyTorch? (Surprisingly Not That Much). https://letters.lossfunk.com/p/how-many-agents-does-it-take-to-beat. Accessed: 2025-11-12.",
+      "url": "https://letters.lossfunk.com/p/how-many-agents-does-it-take-to-beat",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-36",
+      "name": "MSKernelBench",
+      "ref": 36,
+      "year": 2026,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "年份据综述参考文献；首次公开月份待核实",
+      "category": "cuda",
+      "controllers": [],
+      "artifact": "CUDA",
+      "benchmarks": [],
+      "summary": "50 个算子覆盖 FP32 与 BF16，以多尺度正确性和复杂度加权性能扩展工作负载。",
+      "rationale": "稿件4.1.1归入 CUDA；研究名与 benchmark 名不同，此处按一个研究计数。",
+      "roles": [
+        "benchmark"
+      ],
+      "evidence": "survey",
+      "pages": [
+        12
+      ],
+      "citation": "Yuxuan Han, Meng-Hao Guo, Zhengning Liu, Wenguang Chen, and Shi-Min Hu. 2026. Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts. arXiv preprint arXiv:2603.07169 (2026).",
+      "url": "https://arxiv.org/abs/2603.07169",
+      "original": null,
+      "notes": []
+    },
+    {
+      "id": "study-26",
+      "name": "MultiKernelBench",
+      "ref": 26,
+      "year": 2025,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "年份据综述参考文献；首次公开月份待核实",
+      "category": "cross",
+      "controllers": [],
+      "artifact": "CUDA / AscendC / Pallas",
+      "benchmarks": [],
+      "summary": "以模块化后端统一评估多种硬件与语言的内核生成。",
+      "rationale": "明确覆盖 NVIDIA GPU、Ascend NPU 与 Google TPU，归入跨平台。",
+      "roles": [
+        "benchmark"
+      ],
+      "evidence": "survey",
+      "pages": [
+        13
+      ],
+      "citation": "Zhongzhen Wen, Yinghui Zhang, Zhong Li, Zhongxin Liu, Linna Xie, and Tian Zhang. 2025. MultiKernelBench: A Multi-Platform Benchmark for Kernel Generation. arXiv e-prints (2025), arXiv–2507.",
+      "url": null,
+      "original": null,
+      "notes": []
+    },
+    {
+      "id": "study-53",
+      "name": "Nichols et al.",
+      "ref": 53,
+      "year": 2025,
+      "month": 10,
+      "date": "2025-10",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "RAJAPerf",
+        "shock hydrodynamics"
+      ],
+      "summary": "研究将性能分析工具纳入模型推理以支持内核优化。",
+      "rationale": "沿用表5的 Training-based 分类，具体训练设置尚未复核原文。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Daniel Nichols, Konstantinos Parasyris, Charles Jekel, Abhinav Bhatele, and Harshitha Menon. 2025. Integrating Performance Tools in Model Reasoning for GPU Kernel Optimization. arXiv preprint arXiv:2510.17158 (2025).",
+      "url": "https://arxiv.org/abs/2510.17158",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-3",
+      "name": "NPUEval",
+      "ref": 3,
+      "year": 2025,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "年份据综述参考文献；首次公开月份待核实",
+      "category": "alt",
+      "controllers": [],
+      "artifact": "NPU vector kernels",
+      "benchmarks": [],
+      "summary": "为 NPU 向量化内核生成提供可开源运行的评估基础设施与周期级性能指标。",
+      "rationale": "稿件4.1.3归入替代加速器；本轮未核实具体编程语言。",
+      "roles": [
+        "benchmark"
+      ],
+      "evidence": "survey",
+      "pages": [
+        13
+      ],
+      "citation": "Sarunas Kalade and Graham Schelle. 2025. NPUEval: Optimizing NPU Kernels with LLMs and Open Source Compilers. arXiv preprint arXiv:2507.14403 (2025).",
+      "url": "https://arxiv.org/abs/2507.14403",
+      "original": null,
+      "notes": []
+    },
+    {
+      "id": "study-59",
+      "name": "OptiML",
+      "ref": 59,
+      "year": 2026,
+      "month": 2,
+      "date": "2026-02",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "single"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "CUDA-LLM task suite（子集）"
+      ],
+      "summary": "分离初始程序生成与 MCTS 优化，并用 Nsight 指标诊断硬件瓶颈。",
+      "rationale": "沿用表5的 Single-Agent 标签；搜索树分支不是独立的代理数量。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Arijit Bhattacharjee, Heng Ping, Son Vu Le, Paul Bogdan, Nesreen K Ahmed, and Ali Jannesari. 2026. OptiML: An End-to-End Framework for Program Synthesis and CUDA Kernel Optimization. arXiv preprint arXiv:2602.12305 (2026).",
+      "url": "https://arxiv.org/abs/2602.12305",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-55",
+      "name": "PIKE",
+      "ref": 55,
+      "year": 2025,
+      "month": 11,
+      "date": "2025-11",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "PyTorch / CUDA / Triton",
+      "benchmarks": [
+        "METR-refined KernelBench: L3-pike / L5"
+      ],
+      "summary": "使用多代理系统优化 PyTorch 推理，评估经过筛选和扩展的任务设置。",
+      "rationale": "保留稿件的 CUDA 主分类；产物包含 Triton，不据此自动视为跨硬件优化。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Kirill Nagaitsev, Luka Grbcic, Samuel Williams, and Costin Iancu. 2025. Optimizing PyTorch Inference with LLM-Based Multi-Agent Systems. arXiv preprint arXiv:2511.16964 (2025).",
+      "url": "https://arxiv.org/abs/2511.16964",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-73",
+      "name": "PRAGMA",
+      "ref": 73,
+      "year": 2025,
+      "month": 11,
+      "date": "2025-11",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "dsl",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "Triton / C++",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "以 profiling 推理协调多个代理完成内核优化。",
+      "rationale": "表5标注 Multi-Agent；主要归类沿用高级 DSL。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Kelun Lei, Hailong Yang, Huaitao Zhang, Xin You, Kaige Zhang, Zhongzhi Luan, Yi Liu, and Depei Qian. 2025. PRAGMA: A Profiling-Reasoned Multi-Agent Framework for Automatic Kernel Optimization. arXiv preprint arXiv:2511.06345 (2025).",
+      "url": "https://arxiv.org/abs/2511.06345",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-38",
+      "name": "PTXBench",
+      "ref": 38,
+      "year": 2026,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "年份据综述参考文献；首次公开月份待核实",
+      "category": "cuda",
+      "controllers": [
+        "single",
+        "training"
+      ],
+      "artifact": "CUDA with inline PTX",
+      "benchmarks": [],
+      "summary": "分离测量功能正确性、目标指令的实际执行与相对优化库的运行性能。",
+      "rationale": "目标为 CUDA–PTX；MiniPTXAgent 为多轮单代理闭环，repair-conditioned SFT 为训练分支；同一研究只计一次。",
+      "roles": [
+        "benchmark",
+        "method"
+      ],
+      "evidence": "primary",
+      "pages": [
+        12
+      ],
+      "citation": "Genghan Zhang, Yixin Dong, Chengze Fan, Zhichen Zeng, Yueming Yuan, Shaowei Zhu, and Kunle Olukotun. 2026. PTXBench: Benchmarking and Adapting LLMs for GPU Kernel Optimization with Architecture-specific PTX. arXiv preprint arXiv:2608.17379 (2026).",
+      "url": "https://arxiv.org/abs/2608.17379",
+      "original": {
+        "name": "PTXBench.pdf",
+        "pages": "1–2"
+      },
+      "notes": [
+        "已读文件为 v3（2026-09-28），不能作为首次公开日；首发月份暂不定位。"
+      ]
+    },
+    {
+      "id": "study-74",
+      "name": "QiMeng-Kernel (MTMC)",
+      "ref": 74,
+      "year": 2025,
+      "month": 11,
+      "date": "2025-11",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "dsl",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "Triton / CUDA",
+      "benchmarks": [
+        "KernelBench",
+        "TritonBench"
+      ],
+      "summary": "组合宏观思考与微观编码，逐步落实优化计划。",
+      "rationale": "表5将其主贡献归为 Training-based；同时输出 CUDA，主分类仍沿用稿件。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Xinguo Zhu, Shaohui Peng, Jiaming Guo, Yunji Chen, Qi Guo, Yuanbo Wen, Hang Qin, Ruizhi Chen, Qirui Zhou, Ke Gao, et al. 2025. QiMeng-Kernel: Macro-Thinking Micro-Coding Paradigm for LLM-Based High-Performance GPU Kernel Generation. arXiv preprint arXiv:2511.20100 (2025).",
+      "url": "https://arxiv.org/abs/2511.20100",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-58",
+      "name": "Qu et al.",
+      "ref": 58,
+      "year": 2026,
+      "month": 1,
+      "date": "2026-01",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "SGLang kernels（3 tasks）"
+      ],
+      "summary": "组合语义重构与基于搜索的两阶段调优。",
+      "rationale": "采用稿件表5的 CUDA / Multi-Agent 分类；具体分工需进一步原文核实。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Qiuyi Qu, Yicheng Sui, Yufei Sun, Rui Chen, Xiaofei Zhang, Yuzhi Zhang, Haofeng Wang, and Ge Lan. 2026. A Two-Stage GPU Kernel Tuner Combining Semantic Refactoring and Search-Based Optimization. arXiv preprint arXiv:2601.12698 (2026).",
+      "url": "https://arxiv.org/abs/2601.12698",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-104",
+      "name": "SAGE",
+      "ref": 104,
+      "year": 2026,
+      "month": 9,
+      "date": "2026-09-28",
+      "firstDate": "2026-09-28",
+      "dateBasis": "原文首页 arXiv v1 提交日（不等同于已证明最早的所有公开渠道）",
+      "category": "alt",
+      "controllers": [
+        "single"
+      ],
+      "artifact": "AscendC",
+      "benchmarks": [
+        "NPUKernelBench"
+      ],
+      "summary": "在冻结模型外维护采用感知的经验记忆，只巩固被实际采用且有用的知识。",
+      "rationale": "目标为 NPU；原文强调冻结 backbone，memory learning 不等于参数训练，归入 Single-Agent。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "primary",
+      "pages": [
+        "31"
+      ],
+      "citation": "Longxiao Fan, Tao Zhang, Han Yan, Jiajun Li, Mingcong Song, Guoping Long, Hongjie Si, and Weiwei Sun. 2026. From Experience to Expertise: Adoption-Aware Memory Learning for Data-Scarce NPU Kernel Synthesis. arXiv preprint arXiv:2609.35568 (2026).",
+      "url": "https://arxiv.org/abs/2609.35568",
+      "original": {
+        "name": "FROM EXPERIENCE TO EXPERTISE.pdf",
+        "pages": "1–2"
+      },
+      "notes": []
+    },
+    {
+      "id": "study-57",
+      "name": "SparseRL",
+      "ref": 57,
+      "year": null,
+      "month": null,
+      "date": null,
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "SuiteSparse",
+        "DLMC"
+      ],
+      "summary": "在稀疏 CUDA 生成中使用执行与稀疏合法性奖励训练模型。",
+      "rationale": "训练涉及编译、功能、稀疏性及性能反馈；表5日期与参考文献年份不一致，时间待核实。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Anonymous. 2025. Mastering Sparse CUDA Generation through Pretrained Models and Deep Reinforcement Learning. In Submitted to The Fourteenth International Conference on Learning Representations. https://openreview.net/forum?i d=VdLEaGPYWT under review.",
+      "url": null,
+      "notes": [
+        "时间记录不一致：表5为 2026-01，参考文献为 2025。首次公开日期待核实，不纳入已定位的时间统计。"
+      ],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-54",
+      "name": "STARK",
+      "ref": 54,
+      "year": 2025,
+      "month": 10,
+      "date": "2025-10",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "通过策略性代理团队与结构化搜索组织内核修订。",
+      "rationale": "稿件表5归为 Multi-Agent；主要目标仍是 CUDA 内核。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Juncheng Dong, Yang Yang, Tao Liu, Yang Wang, Feng Qi, Vahid Tarokh, Kaushik Rangadurai, and Shuang Yang. 2025. STARK: Strategic Team of Agents for Refining Kernels. arXiv preprint arXiv:2510.16996 (2025).",
+      "url": "https://arxiv.org/abs/2510.16996",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-12",
+      "name": "SwizzlePerf",
+      "ref": 12,
+      "year": 2025,
+      "month": 8,
+      "date": "2025-08",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "alt",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "Triton swizzling patterns",
+      "benchmarks": [
+        "Custom ML / scientific kernels"
+      ],
+      "summary": "学习硬件拓扑相关的工作与数据映射，改善 AMD GPU 缓存局部性。",
+      "rationale": "稿件描述用模型训练学习 swizzling 策略；归入替代加速器 / Training-based。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Arya Tschand, Muhammad Awad, Ryan Swann, Kesavan Ramakrishnan, Jeffrey Ma, Keith Lowery, Ganesh Dasika, and Vijay Janapa Reddi. 2025. Swizzleperf: Hardware-aware llms for gpu kernel performance optimization. arXiv preprint arXiv:2508.20258 (2025).",
+      "url": "https://arxiv.org/abs/2508.20258",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-50",
+      "name": "The FM Agent",
+      "ref": 50,
+      "year": 2025,
+      "month": 10,
+      "date": "2025-10",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "cuda",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "CUDA",
+      "benchmarks": [
+        "KernelBench L3"
+      ],
+      "summary": "以代理协作探索较复杂算子的 CUDA 内核优化。",
+      "rationale": "采用稿件表5的 CUDA / Multi-Agent 标签；此页不补充未经核实的代理结构。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Annan Li, Chufan Wu, Zengle Ge, Yee Hin Chong, Zhinan Hou, Lizhe Cao, Cheng Ju, Jianmin Wu, Huaiming Li, Haobo Zhang, et al. 2025. The fm agent. arXiv preprint arXiv:2510.26144 (2025).",
+      "url": "https://arxiv.org/abs/2510.26144",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-25",
+      "name": "TritonBench",
+      "ref": 25,
+      "year": 2025,
+      "month": null,
+      "date": null,
+      "firstDate": null,
+      "dateBasis": "年份据综述参考文献；首次公开月份待核实",
+      "category": "dsl",
+      "controllers": [],
+      "artifact": "Triton",
+      "benchmarks": [],
+      "summary": "350 个真实算子，按 Pass@K 与相对优化实现的速度评估 Triton 生成。",
+      "rationale": "目标产物为 Triton，归入高级 DSL。",
+      "roles": [
+        "benchmark"
+      ],
+      "evidence": "survey",
+      "pages": [
+        13
+      ],
+      "citation": "Jianling Li, Shangzhan Li, Zhenye Gao, Qi Shi, Yuxuan Li, Zefan Wang, Jiacheng Huang, WangHaojie WangHaojie, Jianrong Wang, Xu Han, et al. 2025. Tritonbench: Benchmarking large language model capabilities for generating triton operators. In Findings of the Association for Computational Linguistics: ACL 2025. 23053–23066.",
+      "url": null,
+      "original": null,
+      "notes": []
+    },
+    {
+      "id": "study-75",
+      "name": "TritonForge",
+      "ref": 75,
+      "year": 2025,
+      "month": 12,
+      "date": "2025-12",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "dsl",
+      "controllers": [
+        "multi"
+      ],
+      "artifact": "Triton",
+      "benchmarks": [
+        "TritonBench"
+      ],
+      "summary": "以 profiling 为引导自动优化 Triton 内核。",
+      "rationale": "沿用稿件表5的高级 DSL / Multi-Agent 分类。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Haonan Li, Keyu Man, Partha Kanuparthy, Hanning Chen, Wei Sun, Sreen Tallam, Chenguang Zhu, Kevin Zhu, and Zhiyun Qian. 2025. TritonForge: Profiling-Guided Framework for Automated Triton Kernel Optimization. arXiv preprint arXiv:2512.09196 (2025).",
+      "url": "https://arxiv.org/abs/2512.09196",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-70",
+      "name": "TritonRL",
+      "ref": 70,
+      "year": 2025,
+      "month": 10,
+      "date": "2025-10",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "dsl",
+      "controllers": [
+        "training"
+      ],
+      "artifact": "Triton",
+      "benchmarks": [
+        "KernelBench"
+      ],
+      "summary": "训练模型生成和改进 Triton 内核，并关注奖励作弊问题。",
+      "rationale": "Triton 是目标产物，强化学习更新模型参数。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        17
+      ],
+      "citation": "Jiin Woo, Shaowei Zhu, Allen Nie, Zhen Jia, Yida Wang, and Youngsuk Park. 2025. TritonRL: Training LLMs to Think and Code Triton Without Cheating. arXiv preprint arXiv:2510.17891 (2025).",
+      "url": "https://arxiv.org/abs/2510.17891",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    },
+    {
+      "id": "study-81",
+      "name": "Xe-Forge",
+      "ref": 81,
+      "year": 2026,
+      "month": 4,
+      "date": "2026-04",
+      "dateBasis": "综述表5记录；首次公开日期未独立复核",
+      "category": "alt",
+      "controllers": [
+        "unknown"
+      ],
+      "artifact": "Triton",
+      "benchmarks": [
+        "KernelBench L2",
+        "FlashAttention"
+      ],
+      "summary": "面向 Intel GPU 规划硬件感知优化阶段，并进行验证和修订。",
+      "rationale": "虽然使用 Triton，主要研究对象是 Intel GPU；控制器是否采用多个自治代理尚需确认。",
+      "roles": [
+        "method"
+      ],
+      "evidence": "survey",
+      "pages": [
+        18
+      ],
+      "citation": "Marcin Spoczynski, Daniel Fleischer, Moshe Berchansky, Gabriela Ben-Melech Stan, Shira Guskin, Weilin Xu, Adam Siemieniuk, and Alexander Heinecke. 2026. Xe-Forge: Multi-Stage LLM-Powered Kernel Optimization for Intel GPU. arXiv preprint arXiv:2605.26118 (2026).",
+      "url": "https://arxiv.org/abs/2605.26118",
+      "notes": [],
+      "original": null,
+      "firstDate": null
+    }
+  ]
+}

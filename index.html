@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="GPU 内核生成与优化综述的私有交互文献地图。浏览真实研究、分类依据与时间演化。">
+<meta name="theme-color" content="#153f35"><title>Kernel Atlas · GPU 内核优化文献地图</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23153f35'/%3E%3Cpath d='M11 10v20m0-9 17-11M11 21l17 9' stroke='%23c9e6bc' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css"><script defer src="core.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到文献地图</a>
+<aside class="sidebar">
+<a class="brand" href="./" aria-label="Kernel Atlas 首页"><span class="brand-symbol">K<span>↗</span></span><span>Kernel Atlas<small>RESEARCH WORKSPACE</small></span></a>
+<div class="workspace-label"><span class="live-dot"></span> GPU 内核优化综述 <span class="version">v.01</span></div>
+<nav class="main-nav" aria-label="主视图"><button data-view="map" class="nav-item active"><span>▦</span>文献地图 <span class="nav-count" id="navCount">—</span></button><button data-view="timeline" class="nav-item"><span>◷</span>时间演化</button><button data-view="sources" class="nav-item"><span>▤</span>数据与依据</button></nav>
+<div class="filter-heading">筛选研究 <button id="resetFilters" class="text-button">重置</button></div>
+<form id="filterForm">
+<fieldset><legend>优化控制器 <span>可多选</span></legend><div id="controllerFilters"></div></fieldset>
+<fieldset><legend>年份</legend><div id="yearFilters" class="year-options"></div></fieldset>
+<fieldset><legend>研究角色</legend><div id="roleFilters"></div></fieldset>
+<fieldset><legend>证据来源</legend><div id="evidenceFilters"></div></fieldset>
+</form>
+<div class="sidebar-note"><span class="lock-icon">⌑</span><div>仅本人可访问<small>私有研究空间</small></div><span class="note-check">✓</span></div>
+</aside>
+<div class="shell">
+<header class="topbar"><div><span class="breadcrumb">研究工作台</span><span class="slash">/</span><strong id="breadcrumbView">文献地图</strong></div><div class="top-meta"><span class="private-pill"><span>⌑</span> 私有</span><span>资料快照 <time>2026.10.17</time></span></div></header>
+<main id="main" tabindex="-1">
+<section class="hero"><div><div class="eyebrow"><span></span> LLM-BASED KERNEL OPTIMIZATION</div><h1>探索内核优化的<span>研究版图<span class="title-dot">.</span></span></h1><p>连接方法、硬件与时间。让综述中的每一项研究，<br class="desktop-break">都有清晰的位置与可追溯的依据。</p></div><div class="hero-stats"><div class="big-stat"><strong id="totalCount">—</strong><span>去重研究</span><small>METHODS + BENCHMARKS</small></div><div class="small-stats"><div><strong>05</strong><span>目标类别</span></div><div><strong>2025–26</strong><span>主要研究年份</span></div></div></div></section>
+<div class="evidence-banner"><span class="evidence-symbol">i</span><p><strong>以真实资料为起点。</strong><span id="evidenceIntro">正在读取综述资料…</span></p><button data-view="sources">查看数据说明 <span>↗</span></button></div>
+<section class="category-section" aria-label="按目标类别筛选"><div class="section-top"><h2>研究目标</h2><span>选择一个类别，探索它的方法与评估</span><button class="text-button" id="allCategories">全部类别</button></div><div class="category-grid" id="categories"></div></section>
+<section class="explorer">
+<div class="explorer-heading"><div class="view-tabs" role="tablist" aria-label="文献浏览视图"><button id="mapTab" data-view="map" role="tab" aria-selected="true">文献地图</button><button id="timelineTab" data-view="timeline" role="tab" aria-selected="false">时间演化</button><button id="sourcesTab" data-view="sources" role="tab" aria-selected="false">数据与依据</button></div><div class="result-info"><span class="live-dot"></span><span id="resultCount" role="status" aria-live="polite"></span></div></div>
+<div id="queryControls" class="query-controls"><label class="search"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="searchInput" type="search" placeholder="搜索研究、语言、benchmark 或优化机制…" aria-label="搜索研究"><kbd>/</kbd></label><label class="sort-label">排序<select id="sortSelect" aria-label="研究排序"><option value="latest">时间 · 由新到旧</option><option value="earliest">时间 · 由旧到新</option><option value="name">名称 · A–Z</option></select></label><button id="exportButton" class="export-button" title="导出当前筛选结果为 JSON"><span>↓</span> 导出</button></div>
+<div id="activeFilters" class="active-filters" aria-label="当前筛选条件"></div>
+<div id="content" aria-live="polite"><div class="loading">正在整理文献地图…</div></div>
+</section>
+<footer><span><strong>Kernel Atlas</strong> / A living map of kernel research</span><span>据 2026.10.15 修订稿整理 · 不确定项均保留标注</span></footer>
+</main>
+</div>
+<dialog id="studyDialog" aria-labelledby="detailTitle"><div class="dialog-top"><span>STUDY DETAILS <span class="dialog-divider">/</span> 研究档案</span><button id="closeDialog" aria-label="关闭研究详情">×</button></div><div id="detailContent"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<noscript><div class="noscript">文献筛选需要启用 JavaScript。</div></noscript>
+</body></html>
