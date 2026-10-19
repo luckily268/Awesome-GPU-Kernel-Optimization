@@ -14,6 +14,7 @@ This repository collects key research works, frameworks, and open-source project
 > - Paper: paper title (linked)  
 > - Code: GitHub / HF / Official repo if available, otherwise marked as 🔒
 
+We have a atlas page in [Kernel Atlas]([https://arxiv.org/abs/2502.10517](https://luckily268.github.io/kernel-atlas/)).
 ## 📚 Contents
 📅 Last update on 2026/3/17
 ### 🔥🔥🔥Post-LLM Era: AI-based and LLM-driven Optimization
