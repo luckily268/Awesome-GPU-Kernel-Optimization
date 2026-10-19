@@ -14,7 +14,7 @@ This repository collects key research works, frameworks, and open-source project
 > - Paper: paper title (linked)  
 > - Code: GitHub / HF / Official repo if available, otherwise marked as 🔒
 
-We have a atlas page in [Kernel Atlas]([https://arxiv.org/abs/2502.10517](https://luckily268.github.io/kernel-atlas/)).
+We have a atlas page in [Kernel Atlas](https://arxiv.org/abs/2502.10517](https://luckily268.github.io/kernel-atlas/).
 ## 📚 Contents
 📅 Last update on 2026/3/17
 ### 🔥🔥🔥Post-LLM Era: AI-based and LLM-driven Optimization
@@ -24,7 +24,7 @@ We have a atlas page in [Kernel Atlas]([https://arxiv.org/abs/2502.10517](https:
 - Euro-Par'25 (LNCS)-[Tutoring LLM into a Better CUDA Optimizer](https://link.springer.com/chapter/10.1007/978-3-031-99857-7_18)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/matyas-brabec/2025-europar-llm?style=social)](https://github.com/matyas-brabec/2025-europar-llm)
 - arxiv'25-[GPU Performance Portability needs Autotuning](https://arxiv.org/abs/2505.03780)– 🔒
 - arxiv'25-[CUDA-LLM:LLMs Can Write Efficient CUDA Kernels](https://arxiv.org/abs/2506.09092)– 🔒
-- arxiv'25=[TritonForge: Profiling-Guided Framework for Automated Triton Kernel Optimization](https://arxiv.org/abs/2512.09196)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/RLsys-Foundation/TritonForge?style=social)](https://github.com/RLsys-Foundation/TritonForge)
+- arxiv'25-[TritonForge: Profiling-Guided Framework for Automated Triton Kernel Optimization](https://arxiv.org/abs/2512.09196)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/RLsys-Foundation/TritonForge?style=social)](https://github.com/RLsys-Foundation/TritonForge)
 - arxiv'25-[EVOENGINEER: MASTERING AUTOMATED CUDA KERNEL CODE EVOLUTION WITH LARGE LANGUAGE MODELS](https://arxiv.org/pdf/2510.03760)– 🔒
 - arvix'25-[From Large to Small: Transferring CUDA Optimization Expertise via Reasoning Graph](https://arxiv.org/abs/2510.19873)– 🔓 [![GitHub stars](https://img.shields.io/github/stars/blacknickwield/ReGraphT?style=social)](https://github.com/blacknickwield/ReGraphT)
 - arxiv'25-[KernelBand: Boosting LLM-based Kernel Optimization with a Hierarchical and Hardware-aware Multi-armed Bandit](https://arxiv.org/abs/2511.18868)– 🔒
